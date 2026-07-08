@@ -18,7 +18,7 @@ through staged pipeline passes: snapshot → repair → rename → consolidate �
 | `.json` | 224   | 29     | Certified |
 | `.py`   | 132   | 42     | Certified |
 | `.txt`  | 210   | 30     | Certified |
-| `.md`   | 2,603 | 23     | In Progress |
+| `.md`   | 2,604 | 26     | In Progress — 1,674 VETTING (554 rescued) |
 | `.sh`   | 70    | —      | Consolidate done |
 
 ## Pipeline Scripts
