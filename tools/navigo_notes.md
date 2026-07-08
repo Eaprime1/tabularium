@@ -8,7 +8,8 @@
 | + Hermes skills | 1,913 | 195 | 318 | title+sidebar_label detection |
 | + reference- fix | 1,809 | 195 | 315 | memory files recovered |
 | + sidebar_position | 1,688 | 187 | 537 | Hermes docs pages to EXTERNAL |
-| **540 rescued total** | | UNEXUS=11 | PIXEL8=15 | shaders.md, Archive_Analysis.md |
+| + AGENT group | 1,634 | 182 | 588 | Gemini+Claude 3-way loop active |
+| **594 rescued total** | | UNEXUS=11 | PIXEL8=15 | AGENT=1, GUARDIAN=7 |
 
 ## Pending
 - Talinor file in /storage/emulated/0/ root — user confirmed "yes on talinor"

@@ -72,3 +72,14 @@ Seneschal handling:
   - Save point narrative written: missions/FIRST_LIBRARY.md
   - Memory updated: project_crispr.md reflects all three certified libraries
   - Next: .md library triage (2,228 VETTING / 2,603 total)
+- **2026-07-08** — INFRASTRUCTURE: Antigravity CLI (agy v1.1.0) operational in PRoot environment
+  - Problem: `pkg install glibc` blocked (root), official VA39 patch guides assume Termux shell
+  - Solution path: downloaded glibc 2.43 .deb manually → extracted to Termux usr path
+  - v1.1.0 binary requires NO TCMalloc VA39 patch (allocator changed upstream)
+  - PRoot wrapper: `/root/.local/bin/agy-run` (glibc loader + env cleanup)
+  - Termux-shell wrapper: `~/.local/bin/agy-run` (proot + glibc, handles /dev/tty for TUI)
+  - `crispr_ai_title.py` updated: `AI_CMD = ["/root/.local/bin/agy-run"]`
+  - Guide written: `tabularium/guides/GUIDE_agy_proot_termux.md`
+  - AI title mining pass for 45 .txt VETTING files is now unblocked
+  - `llm` CLI also installed (pip) as backup AI backend
+  - agy began autonomous environment setup during this session (exploring + configuring)
