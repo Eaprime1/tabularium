@@ -143,14 +143,16 @@ If a future version fails with `MmapAligned() failed`, re-run `~/patch_agy_va39.
 
 ## Use in crispr_ai_title.py
 
+The script and library both live in **Termux home** — run from the Termux shell, not inside PRoot.
+
 ```python
-# PRoot subprocess — shell functions not available, use full path
-AI_CMD = ["/root/.local/bin/agy-run"]
+# Termux-side wrapper — subprocess cannot use shell aliases/functions
+AI_CMD = ["/data/data/com.termux/files/home/.local/bin/agy-run"]
 ```
 
-Run the AI title pass:
+Run the AI title pass from Termux shell (`~ $`):
 ```bash
-python3 ~/crispr_ai_title.py .txt               # dry run
-python3 ~/crispr_ai_title.py .txt --apply        # call agy, save ai_titles.json
-python3 ~/crispr_ai_title.py .txt --limit 5      # first 5 files
+python3 ~/crispr_ai_title.py .txt               # dry run — show snippets
+python3 ~/crispr_ai_title.py .txt --limit 5 --apply   # test 5 files first
+python3 ~/crispr_ai_title.py .txt --apply        # full pass (45 VETTING files)
 ```
