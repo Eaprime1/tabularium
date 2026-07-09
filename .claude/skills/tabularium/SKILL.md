@@ -88,4 +88,3 @@ This skill documents the development patterns and conventions used in the `tabul
 | /add-module   | Scaffold and add a new module           |
 | /run-tests    | Run all test files in the repository    |
 | /refactor     | Refactor code to match conventions      |
-```
