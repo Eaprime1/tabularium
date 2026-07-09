@@ -15,7 +15,7 @@ This folder is the **meta-layer** of the library build — it holds the directiv
 
 - **COMMISSION_Noise_Sparstone** — Noise as pressure; Sparstone holder assignment (lives in `.md` library)
 - **TALINOR_GATHERING** — recovering Talinor Windstride's scattered document family (origin seed, JSON profile family, mythic Elder Board material) beyond the single surviving GUARDIAN stat-block
-- **.md library** — VETTING pending triage (ongoing, see SENESCHAL log for latest count)
+- **.md library** — VETTING pending triage (ongoing, see SENESCHAL_Protocol.md for latest count)
 - **AI title pass** — antigravity CLI progress in separate session; guide: `~/GUIDE_crispr_ai_title.md`
 - **New file types** — `.pdf`, `.yml`, `.docx` folders discovered in shared storage; survey pending
 - **Repo** — library system needs a git home; decision pending (see SENESCHAL log)
