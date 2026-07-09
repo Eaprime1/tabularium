@@ -25,7 +25,7 @@ GROUPS = [
     # ── core systems ─────────────────────────────────────────────────────────
     ("PRIME",      r"^(PRIME_|ALPHA_PRIME|PINNACLE_PRIME|📘_PRIME|prime_codex)"),
     ("UNEXUS",     r"^(UNEXUS|UNEXUSI)"),
-    ("CODEX",      r"^(CODEX_|COMMISSION|upgrade_CODEX|upgrade_C|CONSOLIDATION|CONSORTIUM|END_MATTER|FRONT_MATTER|MILESTONE|REVIEW_GUIDE|diamond_of_aces_CODEX|STREAM_)"),
+    ("CODEX",      r"^(CODEX_|COMMISSION|upgrade_CODEX|upgrade_C|CONSOLIDATION|CONSORTIUM|END_MATTER|FRONT_MATTER|MILESTONE|REVIEW_GUIDE|diamond_of_aces_CODEX)"),
     ("LEXEME",     r"^lexeme_"),
     ("MOAV",       r"^(moav_|MOAV_|🤰|🔬_Alignment_with_MOAV|moav_research|MOAV_Research)"),
     ("MOBIUS",     r"^mobius"),
@@ -69,9 +69,6 @@ GROUPS = [
     ("GITHUB",     r"^github_"),
     ("SVG",        r"^svg_"),
     # ── external / recycle (confirmed non-original: courses, stdlib, tool docs) ──
-    # Numbered course sequences (02-, 03-, 04-, 06-)
-    # React/JS/rendering frameworks, Playwright, Apple dev (WWDC/WWDS/SwiftUI)
-    # MCP, Notion, cargo, MLOPS, glibc, NextJS, Netlify, Cloudflare, etc.
     ("EXTERNAL",   r"^(mlops|mcp[-_.]|mcp$|notion-|native-|cargo-|llms|licenses|"
                    r"Write_Bit|NoAlias|Bit[A-Z]|deref_|deriving|nom_|gguf|"
                    r"nix-setup|node_mcp|nextjs|netlify|deploy-cloudflare|"
@@ -186,7 +183,7 @@ HEADING_OVERRIDES = [
                              r"Adding.*Block.*HyperFrames|Adding.*Component.*HyperFrames|"
                              r"Local File Server.*phone storage|Serve.*phone storage|"
                              r"Spector.*Configuration|CONFIG.*Spector|"
-                             r"Server (Deployment|Information).*Setup|"
+                             r"Server (Deployment|Information).*(Setup|Complete)|"
                              r"Step \d+: (Capture|Design|Script|Storyboard|Narration)|"
                              r"Write DESIGN\.md|Narration Script|Write.*Storyboard|"
                              r"Data in Motion.*video|composition.*video", re.I)),
@@ -205,9 +202,6 @@ HEADING_OVERRIDES = [
                              r"Directory Tree.*Document Analysis|"
                              r"SDWG.*Knowledge Refresh|Reality Anchor.*Framework|"
                              r"Knowledge Refresh.*Strategy|Document Analysis.*∰", re.I)),
-    ("CREATIVE",   r"^creative-"),
-    ("AUTONOMOUS", r"^autonomous-"),
-    ("FINANCE",    r"^finance-"),
     ("SARGASSO", re.compile(r"[Ss]argasso|navitae|navigo|ancient navigators", re.I)),
     ("EXTERNAL", re.compile(r"React Native|Rust.*stdlib|MLOPS Course|"
                              r"Playwright.*Testing|SwiftUI.*Tutorial|WWDC|"
