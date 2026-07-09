@@ -118,7 +118,6 @@ GROUPS = [
                     r"^use-mcp|^use-soul|^use-voice|^use-skill|"
                     r"^complete-agent|^complete-guide|^complete-ref|"
                     r"^fix-codesign|^fix-csr|^update-github|^update-provider|"
-                    r"^creative-|^autonomous-|^finance-|"
                     r"^server-|^server$|^github-|^windows-|^api-|^web-|^image-|"
                     r"^code-|^codebase-|^developer-guide|^development$|"
                     r"^implement-|^IMPLEMENTATION|"
