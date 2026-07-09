@@ -1,0 +1,65 @@
+# Tabularium — Code Review
+# Automatic Claude review on every pull request.
+# Uses the CLAUDE_CODE_OAUTH_TOKEN repository secret (subscription-based auth,
+# same as finalize-pr.yml). ANTHROPIC_API_KEY is intentionally not passed here:
+# that key bills against a separate pay-per-token credit balance.
+name: Tabularium — Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review, reopened]
+
+jobs:
+  claude-review:
+    # `secrets` is not a recognized named-value inside a job-level `if:` —
+    # GitHub Actions rejects the whole expression at parse time when it's
+    # included here (visible as phantom 0-job "push" failures for this
+    # workflow on every commit, regardless of branch).
+    if: ${{ github.event.pull_request.head.repo.fork == false && !contains(fromJSON('["Copilot","copilot[bot]","github-actions[bot]","dependabot[bot]"]'), github.actor) }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: read
+      id-token: write
+      actions: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run Claude Code Review
+        id: claude-review
+        # v1 tag currently points to v1.0.140 (resolved to immutable commit SHA)
+        uses: anthropics/claude-code-action@fbda2eb1bdc90d319b8d853f5deb53bca199a7c1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # anthropic_api_key disabled — enable only once a pay-per-use
+          # console.anthropic.com balance is funded:
+          # anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          additional_permissions: |
+            actions: read
+          allowed_bots: '*'
+          prompt: |
+            Review this pull request for the tabularium repo.
+
+            Context: tabularium is the Crispr-NiE library cleanup pipeline —
+            Python scripts under pipeline/ and tools/ that snapshot, repair,
+            rename, and consolidate flat folders of files into indexed,
+            certified libraries, plus process docs under missions/ and guides/.
+            The pipeline targets Termux on Android (Pixel 8a), Python 3.13,
+            no external dependencies.
+
+            Focus on:
+            - Broken Python syntax, or changes that would break `ast.parse()`/
+              `py_compile` on files the pipeline itself processes
+            - Contradictions between pipeline/CRISPR_PROCEDURE.md and the
+              actual script behavior (phase order, certification gates,
+              file movement conventions: copies/, versions/, duplicates/,
+              repair_backups/, removed.json, library_master.json)
+            - Broken links and paths that do not resolve
+            - Accidental duplication or merge artifacts
+
+            Post concise inline comments only where action is genuinely needed.
+          claude_args: '--allowed-tools "mcp__github_inline_comment__create_inline_comment,Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*)"'
