@@ -1,4 +1,3 @@
-```markdown
 # tabularium Development Patterns
 
 > Auto-generated skill from repository analysis
