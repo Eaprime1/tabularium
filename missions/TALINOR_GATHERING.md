@@ -16,8 +16,7 @@ Talinor Windstride — **First Guardian of the feminine perspective**. A genealo
 bridge across all feminine entities in the Radix repo mythology, witness to the
 "Fall of First Eden," a maternal/generative-womb archetype seated on the Elder Board.
 She is one of several Perspective Guardians, but distinct among them as the
-**shadow-as-mother** anchor (see `🤱mother_as_shadow🤰.md` in the `.md` library —
-the foundational triadic doc her role embodies).
+19:shadow-as-mother** anchor (see `~/pixel8/library/.md/🤱mother_as_shadow🤰.md` —
 
 ## What survives today
 
