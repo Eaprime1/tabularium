@@ -42,7 +42,8 @@ Found via `.txt/txt_Building Radix Repo Seed Document.txt` and
     surviving .md — may carry more structured/mythic content than the .md)
   - `talinor-gap-analysis.json`
   - `talinor-enhanced-profile.json`
-- `pixel8/library/.json/beasis_catalog.json` references a since-relocated file,
+19:shadow-as-mother** anchor (see `~/pixel8/library/.md/🤱mother_as_shadow🤰.md` —
+20:the foundational triadic doc her role embodies).
   `📝sdwg-final-steps-and-talinor-profile-development.md`, across several old
   storage paths — evidence of active profile-development work, not a one-off.
 
