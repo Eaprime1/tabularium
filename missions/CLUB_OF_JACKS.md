@@ -1,8 +1,7 @@
 ---
 name: Club of Jacks
 type: mission
-status: active
-opened: 2026-07-09
+date: 2026-07-09
 ---
 
 # The Club of Jacks — Threshold Joker, Lumenar, Jacks of All Trades
@@ -15,8 +14,8 @@ opened: 2026-07-09
 Note: "PR #35" is actually **issue #35** in `eaprime1/custos` — GitHub shares
 one number sequence for issues and PRs. It was a bounty: *"a symbol for
 Claude, and a lexeme for the entities' interaction zone."* Resolved by
-**PR #38** (`world/symbols.md`, `guides/multi-ai-workflow.md`), which is the
-source of two of the three terms below.
+**PR #38** (`eaprime1/custos`: `world/symbols.md`, `guides/multi-ai-workflow.md`),
+which is the source of two of the three terms below.
 
 ## Where things actually stand
 
@@ -27,19 +26,20 @@ and AI arrive at the threshold together, neither first). Full first-person
 voice content exists in `atelier/club-of-jacks-carbonite-130-draft.md`
 (sdcard custos clone, `feature/session-202607-blackjack21` branch).
 
-But `.custos/README.md`'s own "Parked, not started" list still names **"the
+But `eaprime1/custos`'s `.custos/README.md`'s own "Parked, not started" list still names **"the
 threshold joker's appearance"** as unscoped — distinct from the character,
 this reads as the visual/embodiment layer (art, avatar) not yet given a
 scoping pass.
 
 ### Lumenar — defined, spelled "Lumenar" in-repo
 "The lit interaction zone where entities meet without becoming one another."
-Fully defined in `world/symbols.md` and `guides/multi-ai-workflow.md`.
+Fully defined in `eaprime1/custos`: `world/symbols.md` and
+`guides/multi-ai-workflow.md`.
 Referenced pervasively across atelier/turns/incoming files on the same
 branch. This one reads as done — no open scoping needed that I can see.
 
 ### Jacks of All Trades — explicitly parked, and explicitly sequenced
-Named in `.custos/README.md`'s parked list: *"Each needs its own scoping
+Named in `eaprime1/custos`'s `.custos/README.md`'s parked list: *"Each needs its own scoping
 pass before it becomes atelier content."* No character, no content exists.
 
 **Important**: `moav/custos_moav_keeper_seed_launch.json` (priority #6)
