@@ -9,14 +9,15 @@
 | + reference- fix | 1,809 | 195 | 315 | memory files recovered |
 | + sidebar_position | 1,688 | 187 | 537 | Hermes docs pages to EXTERNAL |
 | + AGENT group | 1,634 | 182 | 588 | Gemini+Claude 3-way loop active |
-| **594 rescued total** | | UNEXUS=11 | PIXEL8=15 | AGENT=1, GUARDIAN=7 |
+| + Antigravity triage | 1,501 | 121 | 725 | fixed frontmatter read limit, triaged CREATIVE/AUTONOMOUS/FINANCE, triaged SERVER/CODE to EXTERNAL |
+| **727 rescued total** | | UNEXUS=12 | PIXEL8=18 | CREATIVE=26, AUTONOMOUS=11, FINANCE=8 |
 
 ## Pending
-- Talinor file in /storage/emulated/0/ root — user confirmed "yes on talinor"
-- Push updated consolidator + missions to tabularium
+- Talinor file copied to library and consolidated
+- Pushed updated consolidator + missions to tabularium
 - GCP service account key revocation (unexusi@api-project-801196094598)
-- agy verify: run `agy --version` once installed
-- Analyzer needs EXTERNAL pattern sync (shows stale 2,167 vs real 1,688)
+- agy verify: run `agy --version` once installed (operational, version 1.1.0)
+- Analyzer synchronized with EXTERNAL pattern
 - Navigo system: 0=project, 1=shell, 2=Claude, 3=Gemini, 4=DM, 5=ChatGPT, up to 14+
 
 ## System State Notes
