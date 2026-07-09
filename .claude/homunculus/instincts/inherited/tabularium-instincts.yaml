@@ -62,8 +62,6 @@ Use relative imports for project files
 ## Evidence
 
 - Import analysis shows relative import pattern
-- Example: import { x } from '../lib/x'
-
 ---
 id: tabularium-export-style
 trigger: "when exporting from a module"
