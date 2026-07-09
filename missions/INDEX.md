@@ -14,6 +14,7 @@ This folder is the **meta-layer** of the library build — it holds the directiv
 ## Active Missions
 
 - **COMMISSION_Noise_Sparstone** — Noise as pressure; Sparstone holder assignment (lives in `.md` library)
+- **LUMENAR** — consolidation/rescue mission, assigned GitHub Copilot; see `reference/mission_data_pack.json` for cross-agent context
 - **.md library** — 2,228 VETTING pending triage (next major pass)
 - **AI title pass** — antigravity CLI progress in separate session; guide: `~/GUIDE_crispr_ai_title.md`
 - **New file types** — `.pdf`, `.yml`, `.docx` folders discovered in shared storage; survey pending
@@ -48,3 +49,4 @@ The library doesn't fear noise. It distills it.
 | WORKFLOWS.md | Standard operating procedures — W1–W7 recurring workflows |
 | CUSTOS_BRIEF.md | Bridge document for eaprime1/custos integration |
 | COMMISSION_Noise_Sparstone.md | Sparstone assignment (in .md library) |
+| LUMENAR.md | Active mission — consolidating Lumenar content, assigned GitHub Copilot |
