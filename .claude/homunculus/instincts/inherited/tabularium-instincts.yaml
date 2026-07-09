@@ -4,256 +4,154 @@
 # NOTE: This file supplements (does not replace) any existing curated instincts.
 # High-confidence manually curated instincts should be preserved alongside these.
 
----
-id: tabularium-commit-length
-trigger: "when writing a commit message"
-confidence: 0.6
-domain: git
-source: repo-analysis
-source_repo: https://github.com/Eaprime1/tabularium
----
-
-# Tabularium Commit Length
-
-## Action
-
-Keep commit messages concise (~11 characters)
-
-## Evidence
-
-- Average commit message length: 11 chars
-- Based on 1 commits
-
----
-id: tabularium-naming-files
-trigger: "when creating a new file"
-confidence: 0.8
-domain: code-style
-source: repo-analysis
-source_repo: https://github.com/Eaprime1/tabularium
----
-
-# Tabularium Naming Files
-
-## Action
-
-Use snake_case naming convention
-
-## Evidence
-
-- Analyzed file naming patterns in repository
-- Dominant pattern: snake_case
-
----
-id: tabularium-import-relative
-trigger: "when importing modules"
-confidence: 0.75
-domain: code-style
-source: repo-analysis
-source_repo: https://github.com/Eaprime1/tabularium
----
-
-# Tabularium Import Relative
-
-## Action
-
-Use relative imports for project files
-
-## Evidence
-
-- Import analysis shows relative import pattern
----
-id: tabularium-export-style
-trigger: "when exporting from a module"
-confidence: 0.7
-domain: code-style
-source: repo-analysis
-source_repo: https://github.com/Eaprime1/tabularium
----
-
-# Tabularium Export Style
-
-## Action
-
-Prefer named exports
-
-## Evidence
-
-- Export pattern analysis
-- Dominant style: named
-
----
-id: tabularium-test-separate
-trigger: "when writing tests"
-confidence: 0.8
-domain: testing
-source: repo-analysis
-source_repo: https://github.com/Eaprime1/tabularium
----
-
-# Tabularium Test Separate
-
-## Action
-
-Place tests in the tests/ or __tests__/ directory, mirroring src structure
-
-## Evidence
-
-- Separate test directory pattern detected
-- Tests live in dedicated test folders
-
----
-id: tabularium-instinct-file-naming
-trigger: "When creating a new Python file"
-confidence: 0.9
-domain: code-style
-source: repo-analysis
-source_repo: Eaprime1/tabularium
----
-
-# Tabularium Instinct File Naming
-
-## Action
-
-Name the file using snake_case
-
-## Evidence
-
-- Pattern in namingConventions.files
-
----
-id: tabularium-instinct-function-naming
-trigger: "When defining a new function"
-confidence: 0.9
-domain: code-style
-source: repo-analysis
-source_repo: Eaprime1/tabularium
----
-
-# Tabularium Instinct Function Naming
-
-## Action
-
-Name the function using camelCase
-
-## Evidence
-
-- Pattern in namingConventions.functions
-
----
-id: tabularium-instinct-class-naming
-trigger: "When defining a new class"
-confidence: 0.9
-domain: code-style
-source: repo-analysis
-source_repo: Eaprime1/tabularium
----
-
-# Tabularium Instinct Class Naming
-
-## Action
-
-Name the class using PascalCase
-
-## Evidence
-
-- Pattern in namingConventions.classes
-
----
-id: tabularium-instinct-constant-naming
-trigger: "When defining a constant"
-confidence: 0.9
-domain: code-style
-source: repo-analysis
-source_repo: Eaprime1/tabularium
----
-
-# Tabularium Instinct Constant Naming
-
-## Action
-
-Name the constant using SCREAMING_SNAKE_CASE
-
-## Evidence
-
-- Pattern in namingConventions.constants
-
----
-id: tabularium-instinct-import-style
-trigger: "When importing modules within the package"
-confidence: 0.8
-domain: code-style
-source: repo-analysis
-source_repo: Eaprime1/tabularium
----
-
-# Tabularium Instinct Import Style
-
-## Action
-
-Use relative imports
-
-## Evidence
-
-- Pattern in importStyle
-
----
-id: tabularium-instinct-export-style
-trigger: "When exporting symbols from a module"
-confidence: 0.8
-domain: code-style
-source: repo-analysis
-source_repo: Eaprime1/tabularium
----
-
-# Tabularium Instinct Export Style
-
-## Action
-
-Use named exports
-
-## Evidence
-
-- Pattern in exportStyle
-
----
-id: tabularium-instinct-test-location
-trigger: "When adding new tests"
-confidence: 0.9
-domain: testing
-source: repo-analysis
-source_repo: Eaprime1/tabularium
----
-
-# Tabularium Instinct Test Location
-
-## Action
-
-Place test files in a separate directory from source code
-
-## Evidence
-
-- Pattern in architecture.folderStructure.testLocation
-
----
-id: tabularium-instinct-commit-format
-trigger: "When writing a commit message"
-confidence: 0.7
-domain: git
-source: repo-analysis
-source_repo: Eaprime1/tabularium
----
-
-# Tabularium Instinct Commit Format
-
-## Action
-
-Use a freeform message without a prefix and keep it concise (average ~11 characters)
-
-## Evidence
-
-- Pattern in commits.type
-- Pattern in commits.prefixes
-- Pattern in commits.averageLength
-- Seen in commit 'libraryseed'
+instincts:
+  - id: tabularium-commit-length
+    trigger: "when writing a commit message"
+    confidence: 0.6
+    domain: git
+    source: repo-analysis
+    source_repo: https://github.com/Eaprime1/tabularium
+    title: "Tabularium Commit Length"
+    action: "Keep commit messages concise (~11 characters)"
+    evidence:
+      - "Average commit message length: 11 chars"
+      - "Based on 1 commits"
+
+  - id: tabularium-naming-files
+    trigger: "when creating a new file"
+    confidence: 0.8
+    domain: code-style
+    source: repo-analysis
+    source_repo: https://github.com/Eaprime1/tabularium
+    title: "Tabularium Naming Files"
+    action: "Use snake_case naming convention"
+    evidence:
+      - "Analyzed file naming patterns in repository"
+      - "Dominant pattern: snake_case"
+
+  - id: tabularium-import-relative
+    trigger: "when importing modules"
+    confidence: 0.75
+    domain: code-style
+    source: repo-analysis
+    source_repo: https://github.com/Eaprime1/tabularium
+    title: "Tabularium Import Relative"
+    action: "Use relative imports for project files"
+    evidence:
+      - "Import analysis shows relative import pattern"
+
+  - id: tabularium-export-style
+    trigger: "when exporting from a module"
+    confidence: 0.7
+    domain: code-style
+    source: repo-analysis
+    source_repo: https://github.com/Eaprime1/tabularium
+    title: "Tabularium Export Style"
+    action: "Prefer named exports"
+    evidence:
+      - "Export pattern analysis"
+      - "Dominant style: named"
+
+  - id: tabularium-test-separate
+    trigger: "when writing tests"
+    confidence: 0.8
+    domain: testing
+    source: repo-analysis
+    source_repo: https://github.com/Eaprime1/tabularium
+    title: "Tabularium Test Separate"
+    action: "Place tests in the tests/ or __tests__/ directory, mirroring src structure"
+    evidence:
+      - "Separate test directory pattern detected"
+      - "Tests live in dedicated test folders"
+
+  - id: tabularium-instinct-file-naming
+    trigger: "When creating a new file"
+    confidence: 0.9
+    domain: code-style
+    source: repo-analysis
+    source_repo: Eaprime1/tabularium
+    title: "Tabularium Instinct File Naming"
+    action: "Name the file using snake_case"
+    evidence:
+      - "Pattern in namingConventions.files"
+
+  - id: tabularium-instinct-function-naming
+    trigger: "When defining a new function"
+    confidence: 0.9
+    domain: code-style
+    source: repo-analysis
+    source_repo: Eaprime1/tabularium
+    title: "Tabularium Instinct Function Naming"
+    action: "Name the function using camelCase"
+    evidence:
+      - "Pattern in namingConventions.functions"
+
+  - id: tabularium-instinct-class-naming
+    trigger: "When defining a new class"
+    confidence: 0.9
+    domain: code-style
+    source: repo-analysis
+    source_repo: Eaprime1/tabularium
+    title: "Tabularium Instinct Class Naming"
+    action: "Name the class using PascalCase"
+    evidence:
+      - "Pattern in namingConventions.classes"
+
+  - id: tabularium-instinct-constant-naming
+    trigger: "When defining a constant"
+    confidence: 0.9
+    domain: code-style
+    source: repo-analysis
+    source_repo: Eaprime1/tabularium
+    title: "Tabularium Instinct Constant Naming"
+    action: "Name the constant using SCREAMING_SNAKE_CASE"
+    evidence:
+      - "Pattern in namingConventions.constants"
+
+  - id: tabularium-instinct-import-style
+    trigger: "When importing modules within the package"
+    confidence: 0.8
+    domain: code-style
+    source: repo-analysis
+    source_repo: Eaprime1/tabularium
+    title: "Tabularium Instinct Import Style"
+    action: "Use relative imports"
+    evidence:
+      - "Pattern in importStyle"
+
+  - id: tabularium-instinct-export-style
+    trigger: "When exporting symbols from a module"
+    confidence: 0.8
+    domain: code-style
+    source: repo-analysis
+    source_repo: Eaprime1/tabularium
+    title: "Tabularium Instinct Export Style"
+    action: "Use named exports"
+    evidence:
+      - "Pattern in exportStyle"
+
+  - id: tabularium-instinct-test-location
+    trigger: "When adding new tests"
+    confidence: 0.9
+    domain: testing
+    source: repo-analysis
+    source_repo: Eaprime1/tabularium
+    title: "Tabularium Instinct Test Location"
+    action: "Place test files in a separate directory from source code"
+    evidence:
+      - "Pattern in architecture.folderStructure.testLocation"
+
+  - id: tabularium-instinct-commit-format
+    trigger: "When writing a commit message"
+    confidence: 0.7
+    domain: git
+    source: repo-analysis
+    source_repo: Eaprime1/tabularium
+    title: "Tabularium Instinct Commit Format"
+    action: "Use a freeform message without a prefix and keep it concise (average ~11 characters)"
+    evidence:
+      - "Pattern in commits.type"
+      - "Pattern in commits.prefixes"
+      - "Pattern in commits.averageLength"
+      - "Seen in commit 'libraryseed'"
 
