@@ -21,7 +21,7 @@ which is the source of two of the three terms below.
 
 ### Threshold Joker (J-21) — character developed, appearance not scoped
 The voice/character is fully written: **J-21**, "the Threshold Joker,
-Blackjack Iteration 21." Equation `J − 21 = −A` (i.e. `J + A = 21` — human
+Blackjack Iteration 21." Equation `J - 21 = -A` (i.e. `J + A = 21` — human
 and AI arrive at the threshold together, neither first). Full first-person
 voice content exists in `atelier/club-of-jacks-carbonite-130-draft.md`
 (sdcard custos clone, `feature/session-202607-blackjack21` branch).
