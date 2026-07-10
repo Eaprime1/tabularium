@@ -71,8 +71,9 @@
       "assigned": "ChatGPT + Dungeon Master (prep only, not delivery), 2026-07-09"
     },
     "gcp_key_revocation": {
-      "account": "unexusi@api-project-801196094598",
-      "status": "still pending as of 2026-07-09, Eric handling personally"
+      "account": "<redacted>",
+      "status": "still pending as of 2026-07-09, Eric handling personally",
+      "note": "Account identifier intentionally redacted from repo-tracked docs; keep details in a private ops log."
     }
   },
 
