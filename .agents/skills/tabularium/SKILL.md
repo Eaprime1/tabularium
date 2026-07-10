@@ -3,7 +3,7 @@
 > Auto-generated skill from repository analysis
 
 ## Overview
-This skill teaches the core development patterns and conventions used in the `tabularium` Python codebase. You'll learn how to structure files, write imports and exports, follow commit and test conventions, and apply common workflows for contributing and maintaining code in this repository.
+This skill teaches the core development patterns and conventions used in the `tabularium` codebase. You'll learn how to structure files, write imports and exports, follow commit and test conventions, and apply common workflows for contributing and maintaining code in this repository.
 
 ## Coding Conventions
 
