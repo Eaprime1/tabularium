@@ -54,6 +54,6 @@ Threshold Joker/Jacks material in CLUB_OF_JACKS.md.
 
 ## Notes
 
-This is the one of the three concepts that doesn't need creative
+This is one of the three concepts that doesn't need creative
 development — just rescue and consolidation. Good first task for Copilot
 to get oriented on the custos/tabularium content model.
