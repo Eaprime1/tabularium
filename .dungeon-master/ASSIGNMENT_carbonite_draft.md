@@ -1,7 +1,7 @@
 # Assignment — held carbonite draft (issue #130 / PR #133)
 
 **From**: Eric, 2026-07-09 (assigned as "chatgpt & dungeon master" — terse,
-so this is Claude's best-guess read of the intent; correct it if this isn't
+so this is this document's best-guess read of the intent; correct it if this isn't
 what Eric meant).
 
 ## The job
