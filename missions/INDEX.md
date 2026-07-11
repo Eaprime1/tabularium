@@ -14,7 +14,9 @@ This folder is the **meta-layer** of the library build — it holds the directiv
 ## Active Missions
 
 - **COMMISSION_Noise_Sparstone** — Noise as pressure; Sparstone holder assignment (lives in `.md` library)
-- **LUMENAR** — consolidation/rescue mission, assigned GitHub Copilot; see `reference/mission_data_pack.json` for cross-agent context
+- **LUMENAR** — consolidation/rescue mission, assigned GitHub Copilot; see reference/mission_data_pack.json for cross-agent context
+- **TALINOR_GATHERING** — gathering Talinor document family; see reference/mission_data_pack.json
+- **CLUB_OF_JACKS** — background on Threshold Joker / Jacks of All Trades; see reference/mission_data_pack.json
 - **.md library** — 2,228 VETTING pending triage (next major pass)
 - **AI title pass** — antigravity CLI progress in separate session; guide: `~/GUIDE_crispr_ai_title.md`
 - **New file types** — `.pdf`, `.yml`, `.docx` folders discovered in shared storage; survey pending
