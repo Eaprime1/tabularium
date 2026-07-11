@@ -15,7 +15,7 @@ This folder is the **meta-layer** of the library build — it holds the directiv
 
 - **COMMISSION_Noise_Sparstone** — Noise as pressure; Sparstone holder assignment (lives in `.md` library)
 - **CLUB_OF_JACKS** — Threshold Joker appearance scoping, Jacks of All Trades development (sequencing question open), rescuing branch-stranded lore from custos
-- **.md library** — 2,228 VETTING pending triage (next major pass)
+- **.md library** — 1,674 VETTING pending triage (next major pass)
 - **AI title pass** — antigravity CLI progress in separate session; guide: `~/GUIDE_crispr_ai_title.md`
 - **New file types** — `.pdf`, `.yml`, `.docx` folders discovered in shared storage; survey pending
 - **Repo** — library system needs a git home; decision pending (see SENESCHAL log)
