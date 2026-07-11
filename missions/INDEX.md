@@ -52,3 +52,5 @@ The library doesn't fear noise. It distills it.
 | CUSTOS_BRIEF.md | Bridge document for eaprime1/custos integration |
 | COMMISSION_Noise_Sparstone.md | Sparstone assignment (in .md library) |
 | LUMENAR.md | Active mission — consolidating Lumenar content, assigned GitHub Copilot |
+| TALINOR_GATHERING.md | Active mission — gathering Talinor document family |
+| CLUB_OF_JACKS.md | Active mission — background on Threshold Joker / Jacks of All Trades |
