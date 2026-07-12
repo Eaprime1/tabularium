@@ -16,13 +16,13 @@ This folder is the **meta-layer** of the library build — it holds the directiv
 - **COMMISSION_Noise_Sparstone** — Noise as pressure; Sparstone holder assignment (lives in `.md` library)
 - **LUMENAR** — consolidation/rescue mission, assigned GitHub Copilot; see reference/mission_data_pack.json for cross-agent context
 - **TALINOR_GATHERING** — gathering Talinor document family; see reference/mission_data_pack.json
-- **CLUB_OF_JACKS** — background on Threshold Joker / Jacks of All Trades; see reference/mission_data_pack.json
-- **.md library** — 2,228 VETTING pending triage (next major pass)
+- **CLUB_OF_JACKS** — Threshold Joker appearance scoping, Jacks of All Trades development (sequencing question open), rescuing branch-stranded lore from custos
+- **.md library** — 1,674 VETTING pending triage (next major pass)
 - **AI title pass** — antigravity CLI progress in separate session; guide: `~/GUIDE_crispr_ai_title.md`
 - **New file types** — `.pdf`, `.yml`, `.docx` folders discovered in shared storage; survey pending
 - **Repo** — library system needs a git home; decision pending (see SENESCHAL log)
 
-## Library Status (2026-07-08)
+## Library Status (2026-07-09)
 
 | Library | Files | Groups | VETTING | Status |
 |---------|-------|--------|---------|--------|
@@ -30,10 +30,11 @@ This folder is the **meta-layer** of the library build — it holds the directiv
 | `.py`   | 132   | 42     | —       | ✅ Certified |
 | `.txt`  | 210   | 30     | 45      | ✅ Certified (save point: FIRST_LIBRARY.md) |
 | `.sh`   | 70    | —      | 0       | 🔄 Consolidate done; 2 truncated files pending |
-| `.md`   | 2,603 | 23     | 2,228   | 🔄 Consolidate done; triage pending |
+| `.md`   | 2,604 | 26     | 1,674   | 🔄 Consolidate done; triage pending |
 | `.pdf`  | ?     | —      | —       | 📋 Survey pending (shared storage) |
-| `.yml`  | ?     | —      | —       | 📋 Survey pending |
+| `.yml`   | ?     | —      | —       | 📋 Survey pending |
 | `.docx` | ?     | —      | —       | 📋 Survey pending |
+
 
 ## Noise Philosophy
 
@@ -53,4 +54,4 @@ The library doesn't fear noise. It distills it.
 | COMMISSION_Noise_Sparstone.md | Sparstone assignment (in .md library) |
 | LUMENAR.md | Active mission — consolidating Lumenar content, assigned GitHub Copilot |
 | TALINOR_GATHERING.md | Active mission — gathering Talinor document family |
-| CLUB_OF_JACKS.md | Active mission — background on Threshold Joker / Jacks of All Trades |
+| CLUB_OF_JACKS.md | Active mission — Threshold Joker/Lumenar/Jacks of All Trades, custos branch-stranding risk |
