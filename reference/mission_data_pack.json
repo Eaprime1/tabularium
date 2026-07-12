@@ -40,22 +40,8 @@
       "status": "assigned to Gemini, 2026-07-09",
 --- 
 name: Deck System Convention 
-type: documentation 
-status: active 
---- 
-
-# Deck System Convention 
-
-This document defines the custom terminology for the project's internal deck system. Please note that these are **not** standard playing cards; they represent a specific organizational and mission-sequencing framework. 
-
-## Suit and Rank Sequencing 
-
-- **Queen Rank**: The sequence is defined as `Diamond of Queen -> Club of Queen -> Heart of Queen`. 
-- **Terminology**: We use the format `[Suit] of [Rank]` (e.g., "Diamond of Queen") to denote specific mission-sequencing slots. 
-
-## Context 
-
-This system is used for tracking mission priority and agent assignments as defined in `reference/mission_data_pack.json` and associated `moav` roadmap documentation. Do not conflate these with standard poker or bridge deck conventions.
+    "queen_rank": {
+      "status": "assigned to Gemini, 2026-07-09"
     },
     "jack_rank": {
       "threshold_joker": {
