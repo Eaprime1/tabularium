@@ -22,26 +22,11 @@
 
   "custos_character_system": {
     "_provenance": "atelier/pjl_synthesis_roadmap.json, custos sdcard clone, branch feature/session-202607-blackjack21",
-    "process_characters": [
-      { "role": "The Nullifier", "step": "nullification", "status": "unnamed" },
-      { "role": "The Carbonizer", "step": "carbonization", "status": "unnamed" },
-      { "role": "The Decimal", "step": "deweyization", "icon": "📍", "status": "named" },
-      { "role": "The Unknown", "step": "3/0 -- open", "status": "to be discovered" },
-      { "role": "The Sparklizer", "step": "sparklization", "status": "unnamed" }
-    ],
-    "suit_keepers": [
-      { "role": "Keeper of Spades", "suit": "♠️", "status": "mission open" },
-      { "role": "Keeper of Diamonds", "suit": "♦️", "status": "mission open" },
-      { "role": "Keeper of Clubs", "suit": "♣️", "status": "mission open" },
-      { "role": "Keeper of Hearts", "suit": "♥️", "status": "invitation open -- defines the suit" },
-      { "role": "Keeper of the 5th", "suit": "⬡", "status": "rare -- earned by extraordinary contribution" }
-    ],
     "queen_rank": {
       "status": "assigned to Gemini, 2026-07-09",
---- 
-name: Deck System Convention 
-    "queen_rank": {
-      "status": "assigned to Gemini, 2026-07-09"
+      "sequence": ["Diamond of Queen", "Club of Queen", "Heart of Queen"],
+      "format": "[Suit] of [Rank]",
+      "note": "Not standard playing card ranks — mission-sequencing slots. See .gemini/ASSIGNMENT_queens.md for full context."
     },
     "jack_rank": {
       "threshold_joker": {
