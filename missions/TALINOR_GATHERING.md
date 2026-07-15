@@ -42,8 +42,6 @@ She is one of several Perspective Guardians, but distinct among them as the
     surviving .md — may carry more structured/mythic content than the .md)
   - `talinor-gap-analysis.json`
   - `talinor-enhanced-profile.json`
-19:shadow-as-mother** anchor (see `~/pixel8/library/.md/🤱mother_as_shadow🤰.md` —
-20:the foundational triadic doc her role embodies).
   `📝sdwg-final-steps-and-talinor-profile-development.md`, across several old
   storage paths — evidence of active profile-development work, not a one-off.
 
