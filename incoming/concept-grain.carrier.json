@@ -1,0 +1,24 @@
+{
+  "carrier_id": "tabularium_moav_intake_conceptgrain001",
+  "prima_clock": "202607150601",
+  "entity": "eaprime1 + Claude (nav1)",
+  "event": "First .pdf library item received — first survey item for the 'New file types: .pdf, .yml, .docx' mission noted in missions/INDEX.md",
+  "chain_of_custody": {
+    "from": {
+      "repo": "eaprime1/custos",
+      "branch": "navigo14/concept-grain",
+      "commit": "2b944acecf6945de2f37462f5ca79c6470dbcb8b",
+      "original_filename": "🌾 The -Grain- Concept.pdf",
+      "landed": "2026-07-01T08:26:17Z (uploaded via GitHub web UI, root of branch)"
+    },
+    "to": {
+      "repo": "eaprime1/tabularium",
+      "path": "incoming/concept-grain.pdf",
+      "landed": "202607150601"
+    },
+    "method": "content moved as-is (byte-identical), filename normalized for filesystem safety; source branch retained in custos, not deleted"
+  },
+  "status": "UNVETTED",
+  "notes": "Single-page PDF, not yet triaged by the Crispr-NiE .pdf pipeline (which does not exist yet per INDEX.md — pdf library status is 'Survey pending'). This is the first concrete item for that survey. Content not machine-read in this pass (no pdftotext available in this environment) — needs a human or vision pass to title/group it.",
+  "symbol": "🌾"
+}
