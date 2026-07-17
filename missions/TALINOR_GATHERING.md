@@ -29,8 +29,8 @@ She is one of several Perspective Guardians, but distinct among them as the
 
 ## What's scattered or lost
 
-32:Found via `~/pixel8/library/.txt/txt_Building Radix Repo Seed Document.txt` and
-33:`~/pixel8/library/.txt/Claude (1).txt` in the `.txt` library (both mtime 2026-07-07):
+Found via `~/pixel8/library/.txt/txt_Building Radix Repo Seed Document.txt` and
+`~/pixel8/library/.txt/Claude (1).txt` in the `.txt` library (both mtime 2026-07-07):
 
 - **💬Taylinor_Origin_Seed** — a Google Drive link, cited as Works Cited item #2
   in the Radix Repo Seed Document. Earliest traceable origin document. Link not
