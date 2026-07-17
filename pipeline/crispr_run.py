@@ -13,17 +13,18 @@ Stages:
   4  snapshot --compare  certification diff
 
 Usage:
-  python3 ~/crispr_run.py .json
-  python3 ~/crispr_run.py .py  --dry-run
-  python3 ~/crispr_run.py .md  --stage 3
-  python3 ~/crispr_run.py .sh  --from 2
-  python3 ~/crispr_run.py .json --stage 3 --remove-noise
+  python3 pipeline/crispr_run.py .json
+  python3 pipeline/crispr_run.py .py  --dry-run
+  python3 pipeline/crispr_run.py .md  --stage 3
+  python3 pipeline/crispr_run.py .sh  --from 2
+  python3 pipeline/crispr_run.py .json --stage 3 --remove-noise
 """
 import subprocess
 import sys
 from pathlib import Path
 
 HOME         = Path.home()
+PIPELINE_DIR = Path(__file__).resolve().parent
 LIBRARY_BASE = HOME / "pixel8/library"
 
 STAGE_NAMES = {
@@ -68,34 +69,34 @@ def run_stage(num: int, ext: str, target: Path, dry_run: bool, extra: list[str])
     adapters = ADAPTERS.get(ext, {})
 
     if num == 0:
-        cmd = ["python3", str(HOME / "crispr_snapshot.py"), str(target)]
+        cmd = ["python3", str(PIPELINE_DIR / "crispr_snapshot.py"), str(target)]
 
     elif num == 1:
         script = adapters.get("repair")
-        if not script or not (HOME / script).exists():
+        if not script or not (PIPELINE_DIR / script).exists():
             print(f"  (no repair adapter for {ext} — stage skipped)")
             return True
-        cmd = ["python3", str(HOME / script), str(target)]
+        cmd = ["python3", str(PIPELINE_DIR / script), str(target)]
         if dry_run:
             cmd.append("--dry-run")
 
     elif num == 2:
-        cmd = ["python3", str(HOME / "crispr_rename.py"), str(target)]
+        cmd = ["python3", str(PIPELINE_DIR / "crispr_rename.py"), str(target)]
         if dry_run:
             cmd.append("--dry-run")
 
     elif num == 3:
         script = adapters.get("consolidate")
-        if not script or not (HOME / script).exists():
+        if not script or not (PIPELINE_DIR / script).exists():
             print(f"  (no consolidate adapter for {ext} — stage skipped)")
             return True
-        cmd = ["python3", str(HOME / script)]
+        cmd = ["python3", str(PIPELINE_DIR / script)]
         if dry_run:
             cmd.append("--dry-run")
         cmd += extra
 
     elif num == 4:
-        cmd = ["python3", str(HOME / "crispr_snapshot.py"), str(target), "--compare"]
+        cmd = ["python3", str(PIPELINE_DIR / "crispr_snapshot.py"), str(target), "--compare"]
 
     else:
         print(f"  Unknown stage {num}")

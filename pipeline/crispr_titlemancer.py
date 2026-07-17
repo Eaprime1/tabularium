@@ -39,7 +39,11 @@ _dot  = LIBRARY_BASE / f".{EXT.lstrip('.')}"
 _bare = LIBRARY_BASE / EXT.lstrip(".")
 LIB_DIR = _dot if _dot.is_dir() else _bare
 ext_name = EXT.lstrip(".")
-MASTER    = LIB_DIR / f"library_master_{ext_name}.json"
+# crispr_consolidate.py (the original .json consolidator) predates the _ext
+# suffix convention and writes the unsuffixed library_master.json — every
+# later consolidator (_py, _md, _txt, ...) uses the _ext-suffixed name.
+MASTER    = (LIB_DIR / "library_master.json" if ext_name == "json"
+             else LIB_DIR / f"library_master_{ext_name}.json")
 AI_CACHE  = LIB_DIR / "ai_titles.json"
 
 # ── AI title cache (populated by crispr_ai_title.py) ────────────────────────

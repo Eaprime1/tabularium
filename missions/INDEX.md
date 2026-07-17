@@ -49,5 +49,5 @@ The library doesn't fear noise. It distills it.
 | FIRST_LIBRARY.md | Save point narrative — .txt certification milestone |
 | WORKFLOWS.md | Standard operating procedures — W1–W7 recurring workflows |
 | CUSTOS_BRIEF.md | Bridge document for eaprime1/custos integration |
-| COMMISSION_Noise_Sparstone.md | Sparstone assignment (in .md library) |
+| COMMISSION_Noise_Sparstone.md | Sparstone assignment — lives at `~/pixel8/library/.md/COMMISSION_Noise_Sparstone.md`, intentionally not tracked in this repo |
 | CLUB_OF_JACKS.md | Active mission — Threshold Joker/Lumenar/Jacks of All Trades, custos branch-stranding risk |
