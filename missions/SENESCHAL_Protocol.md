@@ -78,7 +78,7 @@ Seneschal handling:
   - v1.1.0 binary requires NO TCMalloc VA39 patch (allocator changed upstream)
   - PRoot wrapper: `/root/.local/bin/agy-run` (glibc loader + env cleanup)
   - Termux-shell wrapper: `~/.local/bin/agy-run` (proot + glibc, handles /dev/tty for TUI)
-  - `crispr_ai_title.py` updated: `AI_CMD = ["/root/.local/bin/agy-run"]`
+  - Configure `pipeline/crispr_ai_title.py` as needed: keep `AI_CMD = ["agy"]` if `agy`/`agy-run` is on `PATH`, or set it to the full wrapper path from `guides/GUIDE_agy_proot_termux.md`
   - Guide written: `tabularium/guides/GUIDE_agy_proot_termux.md`
   - AI title mining pass for 45 .txt VETTING files is now unblocked
   - `llm` CLI also installed (pip) as backup AI backend
