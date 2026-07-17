@@ -42,10 +42,8 @@ Found via `~/pixel8/library/.txt/txt_Building Radix Repo Seed Document.txt` and
     surviving .md — may carry more structured/mythic content than the .md)
   - `talinor-gap-analysis.json`
   - `talinor-enhanced-profile.json`
-  `📝sdwg-final-steps-and-talinor-profile-development.md`, across several old
-  storage paths — evidence of active profile-development work, not a one-off.
-
-## Chronology (best guess so far)
+  - `📝sdwg-final-steps-and-talinor-profile-development.md`, across several old
+    storage paths — evidence of active profile-development work, not a one-off.
 
 1. **Taylinor_Origin_Seed** (Drive, undated) — earliest known document.
 2. Profile-development pass — metrics/gap-analysis/enhanced-profile JSON family,
