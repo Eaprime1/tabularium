@@ -10,9 +10,6 @@ import sys
 from pathlib import Path
 
 LIBRARY_JSON   = Path.home() / "pixel8" / "library" / ".json"
-DUPLICATES_DIR = LIBRARY_JSON / "duplicates"
-COPIES_DIR     = LIBRARY_JSON / "copies"
-VERSIONS_DIR   = LIBRARY_JSON / "versions"
 
 VERSION_PATTERN = re.compile(r"_v(\d*)$", re.IGNORECASE)
 
@@ -145,13 +142,14 @@ def file_hash(path: Path) -> str:
 
 def do_copies(target: Path, dry_run: bool):
     print(f"\n--- COPIES: moving (1)(2)... files → copies/ ---\n")
+    copies_dir = target / "copies"
     if not dry_run:
-        COPIES_DIR.mkdir(parents=True, exist_ok=True)
+        copies_dir.mkdir(parents=True, exist_ok=True)
     moved = 0
     for f in sorted(target.iterdir()):
         if not f.is_file() or not is_copy(f.stem):
             continue
-        dest = unique_path(COPIES_DIR / f.name)
+        dest = unique_path(copies_dir / f.name)
         print(f"  ⊕ {f.name}")
         print(f"    → copies/{dest.name}")
         if not dry_run:
@@ -184,8 +182,9 @@ def do_spaces(target: Path, dry_run: bool):
 
 def do_rename(target: Path, dry_run: bool):
     print(f"\n--- RENAME: fixing broken/fragment filenames ---\n")
+    ext = next((f.suffix for f in target.iterdir() if f.is_file()), None)
     files = sorted(f for f in target.iterdir()
-                   if f.is_file() and f.suffix == ".json" and f.parent == target)
+                   if f.is_file() and f.suffix == ext and f.parent == target)
     renamed = 0
     for f in files:
         if not is_bad_name(f.stem):
@@ -207,14 +206,15 @@ def do_rename(target: Path, dry_run: bool):
 
 def do_dedup(target: Path, dry_run: bool):
     print(f"\n--- DEDUP: moving content duplicates → duplicates/ ---\n")
+    duplicates_dir = target / "duplicates"
     if not dry_run:
-        DUPLICATES_DIR.mkdir(parents=True, exist_ok=True)
+        duplicates_dir.mkdir(parents=True, exist_ok=True)
     seen: dict[str, Path] = {}
     moved = kept = 0
     for f in sorted(f for f in target.iterdir() if f.is_file() and f.parent == target):
         h = file_hash(f)
         if h in seen:
-            dest = unique_path(DUPLICATES_DIR / f.name)
+            dest = unique_path(duplicates_dir / f.name)
             print(f"  ⊕ {f.name[:50]}")
             print(f"    └─ dup of {seen[h].name[:50]}")
             if not dry_run:
@@ -235,8 +235,9 @@ def do_versions(target: Path, dry_run: bool):
     _vN (numbered)  = specific older snapshot → move to versions/.
     """
     print(f"\n--- VERSIONS: moving superseded files → versions/ ---\n")
+    versions_dir = target / "versions"
     if not dry_run:
-        VERSIONS_DIR.mkdir(parents=True, exist_ok=True)
+        versions_dir.mkdir(parents=True, exist_ok=True)
 
     files = {f.name: f for f in target.iterdir() if f.is_file() and f.parent == target}
     to_move: list[Path] = []
@@ -256,7 +257,7 @@ def do_versions(target: Path, dry_run: bool):
 
     moved = 0
     for f in sorted(set(to_move)):
-        dest = unique_path(VERSIONS_DIR / f.name)
+        dest = unique_path(versions_dir / f.name)
         print(f"  ↓ {f.name}")
         print(f"    → versions/{dest.name}")
         if not dry_run:
