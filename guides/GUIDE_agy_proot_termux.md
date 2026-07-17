@@ -15,7 +15,7 @@ Standard install methods fail because:
 `agy 1.1.0` running from both:
 - **Termux shell**: `~/.local/bin/agy-run`
 - **Inside PRoot**: `/root/.local/bin/agy-run` (or `agy` shell function)
-- **Python subprocess**: `["/root/.local/bin/agy-run"]` — works in crispr_ai_title.py
+- **Python subprocess**: keep `AI_CMD = ["agy"]` if `agy-run` is on `PATH`, or set `AI_CMD` to the full wrapper path (see “Use in crispr_ai_title.py” below)
 
 ---
 
