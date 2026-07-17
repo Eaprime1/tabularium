@@ -35,6 +35,9 @@ GROUPS = [
     ("PORTAQUE",   r"^(PORTAQUE|📦PORTAQUE)"),
     ("PRIMORIS",   r"^(primoris|PRIMORIS)"),
     ("KA",         r"(^🧁|^🧁md|ka_pressure|ka-pressure|Expanding_the_Ka|Ka_Pressure)"),
+    ("CREATIVE",   r"^creative-"),
+    ("AUTONOMOUS", r"^autonomous-"),
+    ("FINANCE",    r"^finance-"),
     ("SARGASSO",   r"^(sargasso|The_Sargasso|spacetime|🜃)"),
     ("DIAMOND",    r"^diamond_of_aces"),
     ("SEEK",       r"^seek"),
@@ -48,6 +51,7 @@ GROUPS = [
     ("LIMINAL",    r"^(💬🧁|Liminal_Lighthouse)"),
     ("VISIONARY",  r"^(visionary_project|🪬DUPLICATE|🪬VISIONARY)"),
     ("DUNGEON",    r"(Dungeon_Master|Port_as_a_Dungeon)"),
+    ("AGENT",      r"^(AGENT_|agent_)"),
     ("GUARDIAN",   r"^(GUARDIAN_|PERSPECTIVE_GUARDIAN|PERSPECTIVE_REQUEST_|guardian_|perspective_guardian)"),
     # ── sacred / consciousness ────────────────────────────────────────────────
     ("SACRED",     r"^(sacred_|SACRED_|ember_|EMBER_|conscious_|myth_|runic_)"),
@@ -65,9 +69,6 @@ GROUPS = [
     ("GITHUB",     r"^github_"),
     ("SVG",        r"^svg_"),
     # ── external / recycle (confirmed non-original: courses, stdlib, tool docs) ──
-    # Numbered course sequences (02-, 03-, 04-, 06-)
-    # React/JS/rendering frameworks, Playwright, Apple dev (WWDC/WWDS/SwiftUI)
-    # MCP, Notion, cargo, MLOPS, glibc, NextJS, Netlify, Cloudflare, etc.
     ("EXTERNAL",   r"^(mlops|mcp[-_.]|mcp$|notion-|native-|cargo-|llms|licenses|"
                    r"Write_Bit|NoAlias|Bit[A-Z]|deref_|deriving|nom_|gguf|"
                    r"nix-setup|node_mcp|nextjs|netlify|deploy-cloudflare|"
@@ -99,6 +100,37 @@ GROUPS = [
                    r"^skill-authoring|^skill-catalog|"
                    r"^claude-|^docs$|^Windows$|^InputFormatReference$|"
                    r"^dataset-formats$|^anthropic-best-practices$|^ai-gateway$|^ai-patterns$|"
+                   r"^tool[-_]|^plugin[-_]|^error[-_]|^error$|"
+                   r"^example[-_]|^step[-_]|^client[-_]|"
+                   r"^documentation[-_]|^documentation$|"
+                   r"^python[-_]tutorial|^python[-_]guide|^python[-_]ref|"
+                   r"^DOCUMENTATION$|^FAQ[-_]|^faq[-_]|"
+                   r"^project-|^PROJECT_CHARTER|^REVIEW_SETUP|"
+                   r"^context-compression|^context-budget|^context-window|^context-limit|"
+                   r"^visual-change|^visual-companion|^visual-design|^visual-style|"
+                   r"^Testing|^TestWith|^test-|"
+                   r"^tool-gateway|^tool-matrix|^tool-call|^tool-use|"
+                   r"^plugin-api|^plugin-features|^plugin-guide|"
+                   r"^Errors|^error-codes|^error-handling|^error-patterns|"
+                   r"^FromIterator|^from_raw_parts|^from-|"
+                   r"^deeplinks|^deep-link|"
+                   r"^build-a-|^build-agent|^build-mcp|^build-and-run|^build-mcp|"
+                   r"^report-template|^report_issue|^report-templates|"
+                   r"^task-creation|^task-patterns|"
+                   r"^workers$|^workers-|^worker-|^workflow-format|"
+                   r"^system-prompt|^system-surfaces|^system-prompt-design|"
+                   r"^data-batch|^data-handling|^data-explorer|"
+                   r"^config-plugin|^configuration-guide|^config-guide|"
+                   r"^use-mcp|^use-soul|^use-voice|^use-skill|"
+                   r"^complete-agent|^complete-guide|^complete-ref|"
+                   r"^fix-codesign|^fix-csr|^update-github|^update-provider|"
+                   r"^creative-|^autonomous-|^finance-|"
+                   r"^server-|^server$|^github-|^windows-|^api-|^web-|^image-|"
+                   r"^code-|^codebase-|^developer-guide|^development$|"
+                   r"^implement-|^IMPLEMENTATION|"
+                   r"^deploy-cloudflare|^infrastructure-patterns|"
+                   r"^apple-|^spec-|^search-|^local|^app-|"
+                   r"^interactive-|^google|^custom-|^custom$|"
                    r"the[-_]art[-_]of|how[-_]to[-_](write|build|create|use|install)|"
                    r"introduction[-_]to|guide[-_]to|basics[-_]of|overview[-_]of)"),
     # ── noise ────────────────────────────────────────────────────────────────
@@ -129,19 +161,47 @@ HEADING_OVERRIDES = [
                              r"Script started|Welcome to Termux|"
                              r"Hi Perplexity|Claude.*conversation|"
                              r"Claude.*Running Log|Autonomous Exploration.*WikiEntity|"
-                             r"Working Thoughts.*Running Log", re.I)),
+                             r"Working Thoughts.*Running Log|"
+                             r"FROM_CLAUDE|Note for Gemini|Deep Dive.*System Review|"
+                             r"Comprehensive.*System Review|Session Log.*Claude|"
+                             r"CLAUDE\.md Update Guidelines|Update.*CLAUDE\.md", re.I)),
     ("MISSIONS", re.compile(r"^Mission:|Seneschal Protocol|Library.*Mission|"
-                             r"Commission.*Assignment|Sparstone", re.I)),
+                             r"Commission.*Assignment|Sparstone|"
+                             r"Work Deck.*Mission|Mission Deck.*operational", re.I)),
+    ("PANDORA",  re.compile(r"Create Pandora.*Mission|Mission Deck.*release|"
+                             r"Pandora.*Box|Pandora.*Project|Pandora.*Protocol", re.I)),
     ("GUARDIAN", re.compile(r"Perspective Guardians|Guardian.*Catalog|Guardian Trinity|"
                              r"Guardian.*Breakthrough|PERSPECTIVE REQUEST|"
                              r"Guardian Review Automation|perspective.*guardian", re.I)),
     ("PIXEL8",   re.compile(r"PIXEL8|Pixelator|pixel8a|PIXEL.*Domos|"
                              r"Server.*Pixel 8a|Consciousness Collaboration Server|"
                              r"Shader Pipeline.*Composable|pixel canvas.*numpy|"
-                             r"Perlin Noise|Visual Effects.*Noise", re.I)),
+                             r"Perlin Noise|Visual Effects.*Noise|"
+                             r"Visual Style Library.*HyperFrames|HyperFrames.*video|"
+                             r"HyperFrames.*render|visual.*HyperFrames|"
+                             r"HyperFrames.*block|HyperFrames.*component|"
+                             r"Adding.*Block.*HyperFrames|Adding.*Component.*HyperFrames|"
+                             r"Local File Server.*phone storage|Serve.*phone storage|"
+                             r"Spector.*Configuration|CONFIG.*Spector|"
+                             r"Server (Deployment|Information).*(Setup|Complete)|"
+                             r"Step \d+: (Capture|Design|Script|Storyboard|Narration)|"
+                             r"Write DESIGN\.md|Narration Script|Write.*Storyboard|"
+                             r"Data in Motion.*video|composition.*video", re.I)),
+    ("HODIE",    re.compile(r"Hodie.*Project|Project.*Hodie|"
+                             r"Windows Development.*Quick Reference|"
+                             r"Windows Development Environment Setup|"
+                             r"Quick Start.*Infrastructure|"
+                             r"AI Assistant Guide for Hodie|"
+                             r"ACP.*Project|Mulberry.*Project|"
+                             r"PIXEL8 Crawler|crawler_pixel8|Plexus Stage", re.I)),
+    ("RESEARCH", re.compile(r"Webdings Normalization.*Linguistic|"
+                             r"Linguistic.*Breakthrough|Archive Analysis|"
+                             r"nano.*concept|research.*framework", re.I)),
     ("UNEXUS",   re.compile(r"\bUNEXUS\b|Radix\s+Repo|ontological.seed|"
                              r"DirectoryInspector.*unexusi|unexusi.*terminus|"
-                             r"Directory Tree.*Document Analysis", re.I)),
+                             r"Directory Tree.*Document Analysis|"
+                             r"SDWG.*Knowledge Refresh|Reality Anchor.*Framework|"
+                             r"Knowledge Refresh.*Strategy|Document Analysis.*∰", re.I)),
     ("SARGASSO", re.compile(r"[Ss]argasso|navitae|navigo|ancient navigators", re.I)),
     ("EXTERNAL", re.compile(r"React Native|Rust.*stdlib|MLOPS Course|"
                              r"Playwright.*Testing|SwiftUI.*Tutorial|WWDC|"
@@ -151,13 +211,20 @@ HEADING_OVERRIDES = [
                              r"Hermes Agent.*Security Policy|Política de Seguridad de Hermes|"
                              r"Autonomous AI Agents|Build.*Plugin.*Hermes|"
                              r"Reference Guide|Introduction to \w+|"
-                             r"How to (Write|Build|Create|Use|Install)", re.I)),
+                             r"How to (Write|Build|Create|Use|Install)|"
+                             r"Project Charter|Review Setup|Context Compression|"
+                             r"Visual Design System|Testing Framework|"
+                             r"Tool Gateway|Plugin API Reference|"
+                             r"Error Codes|Error Handling Guide|"
+                             r"Deep Link|Deeplinks", re.I)),
 ]
 
 _SENSITIVE = re.compile(
     r"BEGIN (RSA|OPENSSH|EC|DSA|PGP) (PRIVATE KEY|CERTIFICATE)"
     r"|password\s*=\s*\S"
-    r"|api[_\s]?key\s*=\s*\S",
+    r"|api[_\s]?key\s*=\s*\S"
+    r"|github_pat_[a-zA-Z0-9_]+"
+    r"|gh[po]_[a-zA-Z0-9_]+",
     re.IGNORECASE,
 )
 # Values that look like placeholders — suppress false positives
@@ -199,7 +266,7 @@ def extract_heading(path: Path) -> str | None:
 def _read_frontmatter(path: Path) -> str:
     """Return YAML frontmatter string if file starts with ---, else ''."""
     try:
-        head = path.read_text(encoding="utf-8", errors="replace")[:800]
+        head = path.read_text(encoding="utf-8", errors="replace")[:8192]
         if not head.startswith("---"):
             return ""
         end = head.find("---", 3)
