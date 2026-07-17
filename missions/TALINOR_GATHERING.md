@@ -20,7 +20,7 @@ She is one of several Perspective Guardians, but distinct among them as the
 
 ## What survives today
 
-- `pixel8/library/.md/guardian_talinor_windstride_profile.md` — a D&D (Bard,
+- `~/pixel8/library/.md/guardian_talinor_windstride_profile.md` — a D&D (Bard,
   Half-Elf, Level 5) stat-block. Deduped 2026-07-09 (identical copy had been
   sitting alongside it); renamed with the `guardian_` prefix so it auto-routes
   into the GUARDIAN group on every consolidate pass.
