@@ -46,7 +46,9 @@ AI_CACHE  = LIB_DIR / "ai_titles.json"
 # ── AI backend ──────────────────────────────────────────────────────────────
 # antigravity sends the first positional argument as the prompt.
 # Adjust this list if your CLI flags differ (e.g. ["ag", "--prompt"]).
-AI_CMD = ["agy"]
+# Full path — subprocess cannot call shell functions or use aliases
+# Termux-side wrapper (handles glibc + proot TTY)
+AI_CMD = ["/data/data/com.termux/files/home/.local/bin/agy-run"]
 
 TITLE_PROMPT = """\
 You are titling documents from a personal knowledge library. Domain vocabulary:

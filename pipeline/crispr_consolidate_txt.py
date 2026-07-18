@@ -256,7 +256,7 @@ def main():
         lines.append("✓ No noise files detected")
 
     # Security scan — flag files that look like they contain sensitive data
-    _SENSITIVE = re.compile(r"BEGIN (RSA|OPENSSH|EC|DSA|PGP) (PRIVATE KEY|CERTIFICATE)|password\s*=\s*\S|api[_\s]?key\s*=\s*\S", re.IGNORECASE)
+    _SENSITIVE = re.compile(r"BEGIN (RSA|OPENSSH|EC|DSA|PGP) (PRIVATE KEY|CERTIFICATE)|password\s*=\s*\S|api[_\s]?key\s*=\s*\S|github_pat_[a-zA-Z0-9_]+|gh[po]_[a-zA-Z0-9_]+", re.IGNORECASE)
     sensitive = []
     for f in files:
         try:
