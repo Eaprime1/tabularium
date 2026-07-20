@@ -263,7 +263,6 @@ def extract_heading(path: Path) -> str | None:
 def _read_frontmatter(path: Path) -> str:
     """Return YAML frontmatter string if file starts with ---, else ''."""
     try:
-    try:
         with path.open(encoding="utf-8", errors="replace") as f:
             head = f.read(8192)
         if not head.startswith("---"):
