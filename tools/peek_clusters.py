@@ -39,7 +39,6 @@ for prefix, limit in TARGETS.items():
                     if i >= 19:
                         break
             shown = 0
-            shown = 0
             for line in lines[:20]:
                 if line.strip():
                     print(f"     {line.strip()[:68]}")
