@@ -122,8 +122,8 @@ GROUPS = [
                     r"^code-|^codebase-|^developer-guide|^development$|"
                     r"^implement-|^IMPLEMENTATION|"
                     r"^deploy-cloudflare|^infrastructure-patterns|"
-                    r"^apple-|^spec-|^search-|^local|^app-|"
-                    r"^interactive-|^google|^custom-|^custom$|"
+                    r"^apple-|^spec-|^search-|^local[-_]|^app-|"
+                    r"^interactive-|^google[-_]|^custom-|^custom$|"
                     r"the[-_]art[-_]of|how[-_]to[-_](write|build|create|use|install)|"
                     r"introduction[-_]to|guide[-_]to|basics[-_]of|overview[-_]of)"),
     # ── noise ────────────────────────────────────────────────────────────────
