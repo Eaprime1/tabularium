@@ -1,90 +1,55 @@
 # tabularium Development Patterns
 
-> Auto-generated skill from repository analysis
+> Auto-generated skill from repository analysis — corrected 2026-07-17 against the actual `pipeline/` and `tools/` code (the original auto-generated draft assumed a Python package that does not exist here).
 
 ## Overview
-This skill teaches the core development patterns and conventions used in the `tabularium` codebase. You'll learn how to structure files, write imports and exports, follow commit and test conventions, and apply common workflows for contributing and maintaining code in this repository.
+This skill documents the real development patterns used in the `tabularium` repository: a collection of standalone Crispr-NiE pipeline scripts (`pipeline/crispr_*.py`) plus launcher shell scripts (`tools/*.sh`), not a Python package.
 
 ## Coding Conventions
 
 ### File Naming
 - Use **snake_case** for all file names.
-  - Example: `data_loader.py`, `process_utils.py`
+  - Example: `crispr_snapshot.py`, `crispr_analyze_txt.py`
 
 ### Import Style
-- Prefer **relative imports** within the package.
+- Every script uses **absolute, standard-library-only imports**. There is no package structure, no `__init__.py`, and no relative (`from .x import y`) imports anywhere in `pipeline/` or `tools/`.
   - Example:
     ```python
-    from .utils import parse_table
-    from .models import TableModel
+    import json
+    from pathlib import Path
     ```
+
+### Function Naming
+- Functions are **snake_case** throughout (`do_copies`, `do_dedup`, `unique_path`, `extract_title`).
 
 ### Export Style
-- Use **named exports** (explicitly define what is exported from a module).
-  - Example:
-    ```python
-    __all__ = ['TableModel', 'parse_table']
-    ```
+- There are **no module-level exports**. Each script is a standalone CLI entry point:
+  ```python
+  if __name__ == "__main__":
+      main()
+  ```
+  Nothing defines or relies on `__all__`.
 
 ### Commit Patterns
-- Commit messages are **freeform** (no enforced prefixes).
-- Typical commit message is short (average 11 characters).
-  - Example:  
-    ```
-    fix bug
-    add tests
-    update docs
-    ```
+- Commit messages are freeform, full sentences describing the change and its motivation — not short fragments.
 
 ## Workflows
 
-### Adding a New Module
-**Trigger:** When you need to add new functionality as a separate module.
-**Command:** `/add-module`
+The real workflow is the 5-stage Crispr-NiE pipeline documented in `pipeline/CRISPR_PROCEDURE.md`:
 
-1. Create a new Python file using snake_case (e.g., `my_feature.py`).
-2. Use relative imports to access existing utilities or models.
-3. Define `__all__` to specify exported functions/classes.
-4. Write corresponding tests in a `*.test.*` file.
+    python3 pipeline/crispr_run.py .json              # run all 5 stages
+    python3 pipeline/crispr_run.py .py --dry-run      # preview only
+    python3 pipeline/crispr_run.py .md --stage 3      # single stage
+    python3 pipeline/crispr_run.py .sh --from 2       # resume from a stage
 
-### Running Tests
-**Trigger:** To verify code correctness after changes.
-**Command:** `/run-tests`
+Stages: `0 snapshot (before)` → `1 repair` → `2 rename` → `3 consolidate` → `4 snapshot (compare/certify)`. Each library extension (`.json`, `.py`, `.md`, `.sh`, `.txt`) has its own adapter registered in `pipeline/crispr_run.py`'s `ADAPTERS` map.
 
-1. Locate all test files matching the pattern `*.test.*`.
-2. Run tests using your preferred Python test runner (e.g., `pytest`, `unittest`).
-   - Example:
-     ```bash
-     pytest
-     ```
-3. Review the output and fix any failing tests.
-
-### Refactoring Code
-**Trigger:** When improving or restructuring existing code.
-**Command:** `/refactor`
-
-1. Update file and function names to follow snake_case.
-2. Change imports to use relative style if not already.
-3. Adjust `__all__` as needed for named exports.
-4. Update or add tests to cover refactored code.
+`tools/navigo1.sh` is the interactive/non-interactive menu launcher for the `.md` library specifically (`bash tools/navigo1.sh <choice>`).
 
 ## Testing Patterns
 
-- Test files follow the pattern `*.test.*` (e.g., `data_loader.test.py`).
-- The testing framework is **unknown**; use standard Python testing tools like `pytest` or `unittest`.
-- Place tests alongside or near the modules they test.
-- Example test file structure:
-  ```python
-  # data_loader.test.py
-  from .data_loader import load_table
-
-  def test_load_table():
-      assert load_table("sample.csv") is not None
-  ```
+- **There is no test suite in this repository** — no `tests/`, no `*.test.*`, no `pytest`/`unittest` usage. Correctness is verified with `python3 -m py_compile <file>` (syntax) and the pipeline's own before/after snapshot diff (behavioral), not a test framework.
 
 ## Commands
-| Command       | Purpose                                 |
-|---------------|-----------------------------------------|
-| /add-module   | Scaffold and add a new module           |
-| /run-tests    | Run all test files in the repository    |
-| /refactor     | Refactor code to match conventions      |
+
+There are no custom slash commands defined for this repo. The real commands are the pipeline stages above, invoked directly via `python3 pipeline/crispr_run.py <ext>`.
