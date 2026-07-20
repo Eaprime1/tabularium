@@ -45,7 +45,6 @@ curl -fsSLO https://antigravity.google/cli/install.sh
 # Review install.sh before running
 bash install.sh
 # Installs to ~/.local/bin/agy (157MB ARM64 ELF)
-
 No VA39 patch needed for v1.1.0 — the binary works directly with glibc.
 
 ---
