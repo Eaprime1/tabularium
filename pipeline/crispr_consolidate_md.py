@@ -114,7 +114,7 @@ GROUPS = [
                    r"^Errors|^error-codes|^error-handling|^error-patterns|"
                    r"^FromIterator|^from_raw_parts|^from-|"
                    r"^deeplinks|^deep-link|"
-                   r"^build-a-|^build-agent|^build-mcp|^build-and-run|^build-mcp|"
+                   r"^build-a-|^build-agent|^build-mcp|^build-and-run|"
                    r"^report-template|^report_issue|^report-templates|"
                    r"^task-creation|^task-patterns|"
                    r"^workers$|^workers-|^worker-|^workflow-format|"
