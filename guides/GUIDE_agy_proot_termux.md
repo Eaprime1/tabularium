@@ -45,8 +45,6 @@ curl -fsSLO https://antigravity.google/cli/install.sh
 # Review install.sh before running
 bash install.sh
 # Installs to ~/.local/bin/agy (157MB ARM64 ELF)
-# Installs to ~/.local/bin/agy (157MB ARM64 ELF)
----
 
 ## Step 3 — Create PRoot wrapper
 
