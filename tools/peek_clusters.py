@@ -31,10 +31,10 @@ for prefix, limit in TARGETS.items():
     for f in files:
         print(f"\n  ── {f.name[:58]}")
         try:
-        try:
             with f.open(encoding='utf-8', errors='replace') as file:
-        try:
-            with f.open(encoding='utf-8', errors='replace') as file:
+                lines = []
+                for i, line in enumerate(file):
+                    lines.append(line)
                     if i >= 19:
                         break
             shown = 0

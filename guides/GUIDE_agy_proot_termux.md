@@ -45,12 +45,12 @@ curl -fsSLO https://antigravity.google/cli/install.sh
 # Review install.sh before running
 bash install.sh
 # Installs to ~/.local/bin/agy (157MB ARM64 ELF)
+```
 
 ## Step 3 — Create PRoot wrapper
 
 ```bash
 cat > ~/.local/bin/agy-run << 'EOF'
-# Installs to ~/.local/bin/agy (157MB ARM64 ELF)
 unset LD_PRELOAD
 unset LD_LIBRARY_PATH
 export GODEBUG=netdns=go
