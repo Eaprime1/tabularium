@@ -33,9 +33,8 @@ for prefix, limit in TARGETS.items():
         try:
         try:
             with f.open(encoding='utf-8', errors='replace') as file:
-                lines = []
-                for i, line in enumerate(file):
-                    lines.append(line)
+        try:
+            with f.open(encoding='utf-8', errors='replace') as file:
                     if i >= 19:
                         break
             shown = 0
