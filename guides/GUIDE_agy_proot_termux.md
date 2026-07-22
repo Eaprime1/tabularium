@@ -50,8 +50,7 @@ bash install.sh
 
 ```bash
 cat > ~/.local/bin/agy-run << 'EOF'
-#!/bin/sh
-G=/data/data/com.termux/files/usr/glibc/lib
+# Installs to ~/.local/bin/agy (157MB ARM64 ELF)
 unset LD_PRELOAD
 unset LD_LIBRARY_PATH
 export GODEBUG=netdns=go
