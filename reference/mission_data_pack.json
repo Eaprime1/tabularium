@@ -21,12 +21,8 @@
   },
 
   "custos_character_system": {
-    "_provenance": "atelier/pjl_synthesis_roadmap.json, custos sdcard clone, branch feature/session-202607-blackjack21",
     "queen_rank": {
-      "status": "assigned to Gemini, 2026-07-09",
-      "sequence": ["Diamond of Queen", "Club of Queen", "Heart of Queen"],
-      "format": "[Suit] of [Rank]",
-      "note": "Not standard playing card ranks — mission-sequencing slots. See .gemini/ASSIGNMENT_queens.md for full context."
+      "status": "assigned to Gemini, 2026-07-09"
     },
     "jack_rank": {
       "threshold_joker": {
