@@ -1,0 +1,79 @@
+{
+  "_purpose": "Consolidated reference for agents working the missions in this repo. Generated 2026-07-09 from custos + tabularium + library research. Provenance noted per section so claims can be checked, not taken on faith.",
+
+  "navigo_roster": {
+    "_status": "UNRESOLVED CONFLICT - two sources disagree, needs Eric to confirm the real numbering",
+    "source_a": {
+      "origin": "tools/navigo_notes.md (this repo)",
+      "mapping": { "0": "project", "1": "shell", "2": "Claude", "3": "Gemini", "4": "DM (Dungeon Master)", "5": "ChatGPT" },
+      "note": "Says 'up to 14+' but no fuller list found despite searching custos branches (navigo5/granum-anchor-review, navigo14/concept-grain exist as branch names, content not confirmed to match this numbering)."
+    },
+    "source_b": {
+      "origin": "Eric, 2026-07-09 conversation",
+      "mapping": { "1": "Eric (me)", "2": "Claude (you)" },
+      "note": "Conflicts with source_a on slot 1 (shell vs. Eric himself)."
+    },
+    "related_identity_doc": {
+      "file": "pixel8/library/.md/user_navigo_suxenexus.md",
+      "content": "Eric Pace identifies as 'navigo suxenexus' overall -- the navigator who has maintained continuity across 4 years of conversations. This may be the root identity the numbered slots branch off of, distinct from the per-agent numbering itself.",
+      "not_the_same_as": "pixel8/library/.md/NAVIGO.md, which is an unrelated HODIE-repo navigation/plexus architecture doc that also uses the word 'Navigo' -- do not conflate the two."
+    }
+  },
+
+  "custos_character_system": {
+    "queen_rank": {
+      "status": "assigned to Gemini, 2026-07-09"
+    },
+    "jack_rank": {
+      "threshold_joker": {
+        "codename": "J-21",
+        "equation": "J - 21 = -A  (i.e. J + A = 21)",
+        "status": "character/voice fully written",
+        "unscoped_part": "the 'appearance' (visual/embodiment layer) -- explicitly parked per .custos/README.md",
+        "primary_source": "atelier/club-of-jacks-carbonite-130-draft.md"
+      },
+      "jacks_of_all_trades": {
+        "status": "parked, not started, explicitly sequenced after the three Queens",
+        "primary_source": ".custos/README.md 'Parked, not started' section; moav/custos_moav_keeper_seed_launch.json priority #6"
+      }
+    },
+    "lumenar": {
+      "definition": "The lit interaction zone where entities meet without becoming one another",
+      "status": "fully defined, needs consolidation/rescue not invention",
+      "assigned": "GitHub Copilot, 2026-07-09",
+      "primary_sources": ["world/symbols.md", "guides/multi-ai-workflow.md"]
+    }
+  },
+
+  "sensitive_pending_items": {
+    "_note": "Not lore, not for autonomous action -- real people, real decisions, Eric's approval required before anything moves",
+    "carbonite_130_draft": {
+      "file": "atelier/club-of-jacks-carbonite-130-draft.md",
+      "status": "HELD, undelivered",
+      "recipients": ["Rachaelisa", "Ojas2095", "kabbersokhi-boop"],
+      "context": "issue #130 / PR #133 in custos",
+      "assigned": "ChatGPT + Dungeon Master (prep only, not delivery), 2026-07-09"
+    },
+    "gcp_key_revocation": {
+      "account": "<redacted>",
+      "status": "still pending as of 2026-07-09, Eric handling personally",
+      "note": "Account identifier intentionally redacted from repo-tracked docs; keep details in a private ops log."
+    }
+  },
+
+  "stranding_risk": {
+    "_note": "Recurring pattern found this session -- valuable content living on exactly one branch of one local clone",
+    "instances": [
+      { "content": "Talinor document family (origin seed, JSON profile family)", "location": "scattered, mostly lost -- see missions/TALINOR_GATHERING.md" },
+      { "content": "Threshold Joker deep lore, carbonite draft, Lumenar definitions", "location": "custos sdcard clone (/sdcard/pixel8a/custos), branch feature/session-202607-blackjack21 -- not on main, not in pixel8 custos clone" },
+      { "content": "tabularium canonical pipeline scripts", "location": "resolved 2026-07-09 -- push_tabularium.py syncs ~/crispr_*.py loose files into ~/tabularium (cli-setup branch, canonical); ~/pixel8/tabularium is the stale/secondary clone" }
+    ]
+  },
+
+  "active_missions_index": {
+    "TALINOR_GATHERING": { "file": "missions/TALINOR_GATHERING.md", "status": "active", "assigned": "unassigned as of 2026-07-09" },
+    "CLUB_OF_JACKS": { "file": "missions/CLUB_OF_JACKS.md", "status": "active", "assigned": "split -- see queen_rank/jack_rank/lumenar above" },
+    "LUMENAR": { "file": "missions/LUMENAR.md", "status": "active", "assigned": "GitHub Copilot" },
+    "COMMISSION_Noise_Sparstone": { "file": "lives in .md library, not this repo", "status": "active" }
+  }
+}
