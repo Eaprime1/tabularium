@@ -14,11 +14,14 @@ This folder is the **meta-layer** of the library build — it holds the directiv
 ## Active Missions
 
 - **COMMISSION_Noise_Sparstone** — Noise as pressure; Sparstone holder assignment (lives in `.md` library)
+- **DIAMOND_OF_QUEEN** — The Mnemonist (Conversation Heritage & Indexing), assigned Gemini; see .gemini/ASSIGNMENT_queens.md
+- **CLUB_OF_QUEEN** — The Arbiter (Operations & Contributor Pipeline), assigned Gemini; see .gemini/ASSIGNMENT_queens.md
+- **HEART_OF_QUEEN** — The Harmonizer (Relational Invitation & Multi-AI Alignment), assigned Gemini; see .gemini/ASSIGNMENT_queens.md
 - **LUMENAR** — consolidation/rescue mission, assigned GitHub Copilot; see reference/mission_data_pack.json for cross-agent context
 - **TALINOR_GATHERING** — gathering Talinor document family; see reference/mission_data_pack.json
 - **TALINOR_GATHERING** — recovering Talinor Windstride's scattered document family (origin seed, JSON profile family, mythic Elder Board material) beyond the single surviving GUARDIAN stat-block
 - **CLUB_OF_JACKS** — Threshold Joker appearance scoping, Jacks of All Trades development (sequencing question open), rescuing branch-stranded lore from custos
-- **.md library** — 1,674 VETTING pending triage (next major pass)
+- **.md library** — 1,531 VETTING pending triage (next major pass)
 - **AI title pass** — antigravity CLI progress in separate session; guide: `~/GUIDE_crispr_ai_title.md`
 - **New file types** — `.pdf`, `.yml`, `.docx` folders discovered in shared storage; survey pending
 - **Repo** — library system needs a git home; decision pending (see SENESCHAL log)
@@ -31,7 +34,7 @@ This folder is the **meta-layer** of the library build — it holds the directiv
 | `.py`   | 132   | 42     | —       | ✅ Certified |
 | `.txt`  | 210   | 30     | 45      | ✅ Certified (save point: FIRST_LIBRARY.md) |
 | `.sh`   | 70    | —      | 0       | 🔄 Consolidate done; 2 truncated files pending |
-| `.md`   | 2,604 | 26     | 1,674   | 🔄 Consolidate done; triage pending |
+| `.md`   | 2,640 | 26     | 1,531   | 🔄 Consolidate done; triage pending |
 | `.pdf`  | ?     | —      | —       | 📋 Survey pending (shared storage) |
 | `.yml`   | ?     | —      | —       | 📋 Survey pending |
 | `.docx` | ?     | —      | —       | 📋 Survey pending |
@@ -57,3 +60,6 @@ The library doesn't fear noise. It distills it.
 | TALINOR_GATHERING.md | Active mission — gathering Talinor document family |
 | TALINOR_GATHERING.md | Active mission — recovering Talinor's scattered content across custos + library |
 | CLUB_OF_JACKS.md | Active mission — Threshold Joker/Lumenar/Jacks of All Trades, custos branch-stranding risk |
+| DIAMOND_OF_QUEEN.md | Active mission — The Mnemonist (Conversation Heritage & Indexing) |
+| CLUB_OF_QUEEN.md | Active mission — The Arbiter (Operations & Contributor Pipeline) |
+| HEART_OF_QUEEN.md | Active mission — The Harmonizer (Relational Invitation & Multi-AI Alignment) |
