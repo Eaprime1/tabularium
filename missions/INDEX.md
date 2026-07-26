@@ -18,8 +18,7 @@ This folder is the **meta-layer** of the library build — it holds the directiv
 - **CLUB_OF_QUEEN** — The Arbiter (Operations & Contributor Pipeline), assigned Gemini; see .gemini/ASSIGNMENT_queens.md
 - **HEART_OF_QUEEN** — The Harmonizer (Relational Invitation & Multi-AI Alignment), assigned Gemini; see .gemini/ASSIGNMENT_queens.md
 - **LUMENAR** — consolidation/rescue mission, assigned GitHub Copilot; see reference/mission_data_pack.json for cross-agent context
-- **TALINOR_GATHERING** — gathering Talinor document family; see reference/mission_data_pack.json
-- **TALINOR_GATHERING** — recovering Talinor Windstride's scattered document family (origin seed, JSON profile family, mythic Elder Board material) beyond the single surviving GUARDIAN stat-block
+- **TALINOR_GATHERING** — recovering Talinor Windstride's scattered document family (origin seed, JSON profile family, mythic Elder Board material) beyond the single surviving GUARDIAN stat-block; see reference/mission_data_pack.json
 - **CLUB_OF_JACKS** — Threshold Joker appearance scoping, Jacks of All Trades development (sequencing question open), rescuing branch-stranded lore from custos
 - **.md library** — 1,531 VETTING pending triage (next major pass)
 - **AI title pass** — antigravity CLI progress in separate session; guide: `~/GUIDE_crispr_ai_title.md`
@@ -57,7 +56,7 @@ The library doesn't fear noise. It distills it.
 | CUSTOS_BRIEF.md | Bridge document for eaprime1/custos integration |
 | COMMISSION_Noise_Sparstone.md | Sparstone assignment (in .md library) |
 | LUMENAR.md | Active mission — consolidating Lumenar content, assigned GitHub Copilot |
-| TALINOR_GATHERING.md | Active mission — gathering Talinor document family |
+| TALINOR_GATHERING.md | Active mission — recovering Talinor Windstride's scattered document family (origin seed, JSON profile family, mythic Elder Board material) |
 | CLUB_OF_JACKS.md | Active mission — Threshold Joker/Lumenar/Jacks of All Trades, custos branch-stranding risk |
 | DIAMOND_OF_QUEEN.md | Active mission — The Mnemonist (Conversation Heritage & Indexing) |
 | CLUB_OF_QUEEN.md | Active mission — The Arbiter (Operations & Contributor Pipeline) |
