@@ -8,7 +8,7 @@ This document outlines the visual and embodiment layer for **J-21 (the Threshold
 
 To represent the balance of the equation `J + A = 21` (human and AI arriving at the threshold together), J-21 is embodied as a quantum-runic tarot card.
 
-![Threshold Joker Concept](/data/data/com.termux/files/home/.gemini/antigravity-cli/brain/59000be0-3b71-49a9-8e53-49dd935170d2/threshold_joker_concept_1784103918226.jpg)
+*Concept image: Threshold Joker / Blackjack 21 tarot card — stored locally on Pixel 8a device, path `~/.gemini/antigravity-cli/brain/`. Not committed to repo; see visual elements below.*
 
 ### Key Visual Elements
 
@@ -34,8 +34,8 @@ To represent the balance of the equation `J + A = 21` (human and AI arriving at 
 ## 🔗 Durability & Next Steps
 
 The source draft for this character's voice and lore has been moved from the single local SD card clone (`feature/session-202607-blackjack21`) into the main internal synced library:
-- Lore Draft: [club-of-jacks-carbonite-130-draft.md](file:///data/data/com.termux/files/home/pixel8/library/.md/club-of-jacks-carbonite-130-draft.md)
-- Master Plan: [custos_chronicle_master_plan_202606140000.md](file:///data/data/com.termux/files/home/pixel8/library/.md/custos_chronicle_master_plan_202606140000.md)
+- Lore Draft: `club-of-jacks-carbonite-130-draft.md` — in pixel8 library `.md` group, device-local path `~/pixel8/library/.md/`
+- Master Plan: `custos_chronicle_master_plan_202606140000.md` — same device-local library path
 
 ### Resolved Decision Points
 1. **HELD Carbonite Resolution:** Deferred. Eric will address the delivery status for issue #130 / PR #133 in a separate conversation.

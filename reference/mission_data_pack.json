@@ -33,12 +33,19 @@
         "codename": "J-21",
         "equation": "J - 21 = -A  (i.e. J + A = 21)",
         "status": "character/voice fully written",
-        "unscoped_part": "the 'appearance' (visual/embodiment layer) -- explicitly parked per .custos/README.md",
+        "unscoped_part": "the 'appearance' (visual/embodiment layer) -- explicitly parked in custos .custos/README.md; scoped separately from the written character",
         "primary_source": "atelier/club-of-jacks-carbonite-130-draft.md"
       },
       "jacks_of_all_trades": {
         "status": "parked, not started, explicitly sequenced after the three Queens",
-        "primary_source": ".custos/README.md 'Parked, not started' section; moav/custos_moav_keeper_seed_launch.json priority #6"
+        "primary_source": "custos .custos/README.md 'Parked, not started' section; moav/custos_moav_keeper_seed_launch.json priority #6"
+      },
+      "jacks_authority_modes": {
+        "_note": "Jacks operate within the King/Queen channel as the primary path, but the system acknowledges overlapping authorities. A Jack may act in any of the modes below.",
+        "primary": "aligned with King or Queen channel -- the standard operating mode",
+        "rogue": "Jack acting as own authority -- self-directed within the system's bounds; 'Jack of another kingdom' variant",
+        "emissary": "Jack acting as intermediary or hired agent across authority structures",
+        "source": "Eric, 2026-07-26 -- preserved from deleted CLUB_OF_JACKS_SCOPE.md Ranks & Authority System section"
       }
     },
     "lumenar": {
@@ -75,8 +82,8 @@
   },
 
   "active_missions_index": {
-    "TALINOR_GATHERING": { "file": "missions/TALINOR_GATHERING.md", "status": "active", "assigned": "unassigned as of 2026-07-09" },
-    "CLUB_OF_JACKS": { "file": "missions/CLUB_OF_JACKS.md", "status": "active", "assigned": "split -- see queen_rank/jack_rank/lumenar above" },
+    "TALINOR_GATHERING": { "file": "missions/TALINOR_GATHERING.md", "status": "pending", "assigned": "unassigned as of 2026-07-09" },
+    "CLUB_OF_JACKS": { "file": "missions/CLUB_OF_JACKS.md", "status": "active", "assigned": "split -- see queen_rank/jack_rank/lumenar above", "development_context": "Jacks are ongoing development tracks. Threshold Joker appearance unscoped; Jacks of All Trades sequenced after Queens. Jack authority modes in jack_rank.jacks_authority_modes." },
     "LUMENAR": { "file": "missions/LUMENAR.md", "status": "active", "assigned": "GitHub Copilot" },
     "COMMISSION_Noise_Sparstone": { "file": "lives in .md library, not this repo", "status": "active" }
   }

@@ -1,8 +1,6 @@
 # Assignment — held carbonite draft (issue #130 / PR #133)
 
-**From**: Eric, 2026-07-09 (assigned as "chatgpt & dungeon master" — terse,
-so this is this document's best-guess read of the intent; correct it if this isn't
-what Eric meant).
+**From**: Eric, 2026-07-09 (assigned as "chatgpt & dungeon master").
 
 ## The job
 
@@ -39,6 +37,6 @@ external connector access. Splitting prep (DM, local) from delivery
 
 - `missions/CLUB_OF_JACKS.md` (this repo) — full background on Threshold
   Joker / Lumenar / Jacks of All Trades, of which this carbonite is one
-  piece.
+  piece. See also `reference/mission_data_pack.json`, `custos_character_system.jack_rank`.
 - `atelier/ethics-foundation.md` (custos) — cites PR #133 directly; the
   "no stale claim goes unanswered" rule originates from this exact issue.

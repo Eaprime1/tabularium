@@ -37,15 +37,15 @@ Everything above lives on a single branch, in a single local clone
 (`/sdcard/pixel8a/custos`, branch `feature/session-202607-blackjack21`) —
 not on `main`, not in the `pixel8` custos clone, not anywhere else. Same
 stranding risk already flagged for Talinor's document family and the
-Threshold Joker/Jacks material in CLUB_OF_JACKS.md.
+Threshold Joker/Jacks material in `missions/CLUB_OF_JACKS.md` (see also `reference/mission_data_pack.json`, `custos_character_system.jack_rank`).
 
 ## Mission tasks (assigned: GitHub Copilot)
 
 - [ ] Pull every Lumenar reference from the `feature/session-202607-blackjack21`
   branch into one consolidated reference document.
 - [ ] Confirm there's no unscoped gap (no "Lumenar appearance" style parked
-  item the way Threshold Joker has one) — verify against `.custos/README.md`'s
-  parked list.
+  item the way Threshold Joker has one) — verify against `reference/mission_data_pack.json`
+  (`custos_character_system.jack_rank.threshold_joker.unscoped_part`).
 - [ ] Get the consolidated doc merged into custos `main` so it survives
   independent of the single branch/clone.
 - [ ] Cross-link from `world/factions.md` / wherever Threshold Joker and
