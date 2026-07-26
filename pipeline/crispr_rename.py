@@ -182,7 +182,10 @@ def do_spaces(target: Path, dry_run: bool):
 
 def do_rename(target: Path, dry_run: bool):
     print(f"\n--- RENAME: fixing broken/fragment filenames ---\n")
-    ext = next((f.suffix for f in target.iterdir() if f.is_file()), None)
+    ext = target.suffix if target.suffix else next(
+        (f.suffix for f in target.iterdir() if f.is_file() and not f.name.startswith((".", "snapshot_", "library_"))),
+        None,
+    )
     files = sorted(f for f in target.iterdir()
                    if f.is_file() and f.suffix == ext and f.parent == target)
     renamed = 0
