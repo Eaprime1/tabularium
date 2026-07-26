@@ -21,8 +21,6 @@
   },
 
   "custos_character_system": {
-    "queen_rank": {
-      "status": "assigned to Gemini, 2026-07-09"
     "_provenance": "atelier/pjl_synthesis_roadmap.json, custos sdcard clone, branch feature/session-202607-blackjack21",
     "queen_rank": {
       "status": "assigned to Gemini, 2026-07-09",
