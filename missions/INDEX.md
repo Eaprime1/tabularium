@@ -54,6 +54,7 @@ The library doesn't fear noise. It distills it.
 | FIRST_LIBRARY.md | Save point narrative — .txt certification milestone |
 | WORKFLOWS.md | Standard operating procedures — W1–W7 recurring workflows |
 | CUSTOS_BRIEF.md | Bridge document for eaprime1/custos integration |
+| COMMISSION_Noise_Sparstone.md | Sparstone assignment — lives at `~/pixel8/library/.md/COMMISSION_Noise_Sparstone.md`, intentionally not tracked in this repo |
 | COMMISSION_Noise_Sparstone.md | Sparstone assignment (in .md library) |
 | LUMENAR.md | Active mission — consolidating Lumenar content, assigned GitHub Copilot |
 | TALINOR_GATHERING.md | Active mission — recovering Talinor Windstride's scattered document family (origin seed, JSON profile family, mythic Elder Board material) |

@@ -61,7 +61,7 @@ case "$choice" in
     3) python3 ~/crispr_analyze_md.py ;;
     4) python3 ~/sample_clusters.py ;;
     5) python3 ~/peek_clusters.py ;;
-    6) python3 ~/push_tabularium.py ;;
+    6) python3 ~/push_tabularium.py ;;  # loose home-root script, not tracked in this repo — copies ~/crispr_*.py into ~/tabularium for commit
     a|A)
         fix_ripgrep
         echo ""

@@ -9,7 +9,6 @@ Usage:
 import ast
 import hashlib
 import json
-import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -157,7 +156,7 @@ def main():
 
     # Take new snapshot
     snap = take_snapshot(target)
-    label = "after" if existing else "before"
+    label = "after" if compare else "before"
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     snap_path = target / f"snapshot_{ts}_{label}.json"
     snap_path.write_text(json.dumps(snap, indent=2, ensure_ascii=False), encoding="utf-8")
