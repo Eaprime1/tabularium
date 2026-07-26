@@ -73,6 +73,8 @@ GROUPS = [
                     r"generate-account|generate-guidelines|geo-sra|"
                     r"getting_started\.md|CRATE_README|ORG_CODE|UserDocumentation|"
                     r"VERSIONING\.md|VERSION_HISTORY|VERSION_0_DOC|USAGE_EXAMPLES|"
+                    r"getting_started|CRATE_README|ORG_CODE|UserDocumentation|"
+                    r"VERSIONING|VERSION_HISTORY|VERSION_0_DOC|USAGE_EXAMPLES|"
                     r"NOTICES|CREDITS|file_with_spaces|table_with|table_wrap|table_truncate|"
                     r"0[0-9][-_]|rerender|rendering[-_]|"
                     r"playwright|jest[-_]|testing[-_]guide|"
@@ -109,6 +111,7 @@ GROUPS = [
                     r"^FromIterator|^from_raw_parts|^from-|"
                     r"^deeplinks|^deep-link|"
                     r"^build-a-|^build-agent|^build-mcp|^build-and-run|^build-mcp|"
+                    r"^build-a-|^build-agent|^build-mcp|^build-and-run|"
                     r"^report-template|^report_issue|^report-templates|"
                     r"^task-creation|^task-patterns|"
                     r"^workers$|^workers-|^worker-|^workflow-format|"
@@ -125,6 +128,8 @@ GROUPS = [
                     r"^deploy-cloudflare|^infrastructure-patterns|"
                     r"^apple-|^spec-|^search-|^local|^app-|"
                     r"^interactive-|^google|^custom-|^custom$|"
+                    r"^apple-|^spec-|^search-|^local[-_]|^app-|"
+                    r"^interactive-|^google[-_]|^custom-|^custom$|"
                     r"the[-_]art[-_]of|how[-_]to[-_](write|build|create|use|install)|"
                     r"introduction[-_]to|guide[-_]to|basics[-_]of|overview[-_]of)"),
     # ── noise ────────────────────────────────────────────────────────────────

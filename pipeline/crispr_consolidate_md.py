@@ -267,6 +267,8 @@ def _read_frontmatter(path: Path) -> str:
     """Return YAML frontmatter string if file starts with ---, else ''."""
     try:
         head = path.read_text(encoding="utf-8", errors="replace")[:8192]
+        with path.open(encoding="utf-8", errors="replace") as f:
+            head = f.read(8192)
         if not head.startswith("---"):
             return ""
         end = head.find("---", 3)
