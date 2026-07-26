@@ -114,7 +114,7 @@ GROUPS = [
                    r"^Errors|^error-codes|^error-handling|^error-patterns|"
                    r"^FromIterator|^from_raw_parts|^from-|"
                    r"^deeplinks|^deep-link|"
-                   r"^build-a-|^build-agent|^build-mcp|^build-and-run|"
+                   r"^build-a-|^build-agent|^build-mcp|^build-and-run|^build-mcp|"
                    r"^report-template|^report_issue|^report-templates|"
                    r"^task-creation|^task-patterns|"
                    r"^workers$|^workers-|^worker-|^workflow-format|"
@@ -124,12 +124,13 @@ GROUPS = [
                    r"^use-mcp|^use-soul|^use-voice|^use-skill|"
                    r"^complete-agent|^complete-guide|^complete-ref|"
                    r"^fix-codesign|^fix-csr|^update-github|^update-provider|"
+                   r"^creative-|^autonomous-|^finance-|"
                    r"^server-|^server$|^github-|^windows-|^api-|^web-|^image-|"
                    r"^code-|^codebase-|^developer-guide|^development$|"
                    r"^implement-|^IMPLEMENTATION|"
                    r"^deploy-cloudflare|^infrastructure-patterns|"
-                   r"^apple-|^spec-|^search-|^local[-_]|^app-|"
-                   r"^interactive-|^google[-_]|^custom-|^custom$|"
+                   r"^apple-|^spec-|^search-|^local|^app-|"
+                   r"^interactive-|^google|^custom-|^custom$|"
                    r"the[-_]art[-_]of|how[-_]to[-_](write|build|create|use|install)|"
                    r"introduction[-_]to|guide[-_]to|basics[-_]of|overview[-_]of)"),
     # ── noise ────────────────────────────────────────────────────────────────
@@ -221,7 +222,9 @@ HEADING_OVERRIDES = [
 _SENSITIVE = re.compile(
     r"BEGIN (RSA|OPENSSH|EC|DSA|PGP) (PRIVATE KEY|CERTIFICATE)"
     r"|password\s*=\s*\S"
-    r"|api[_\s]?key\s*=\s*\S",
+    r"|api[_\s]?key\s*=\s*\S"
+    r"|github_pat_[a-zA-Z0-9_]+"
+    r"|gh[po]_[a-zA-Z0-9_]+",
     re.IGNORECASE,
 )
 # Values that look like placeholders — suppress false positives
@@ -263,6 +266,7 @@ def extract_heading(path: Path) -> str | None:
 def _read_frontmatter(path: Path) -> str:
     """Return YAML frontmatter string if file starts with ---, else ''."""
     try:
+        head = path.read_text(encoding="utf-8", errors="replace")[:8192]
         with path.open(encoding="utf-8", errors="replace") as f:
             head = f.read(8192)
         if not head.startswith("---"):
