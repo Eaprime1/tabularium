@@ -16,6 +16,7 @@ This folder is the **meta-layer** of the library build — it holds the directiv
 - **COMMISSION_Noise_Sparstone** — Noise as pressure; Sparstone holder assignment (lives in `.md` library)
 - **LUMENAR** — consolidation/rescue mission, assigned GitHub Copilot; see reference/mission_data_pack.json for cross-agent context
 - **TALINOR_GATHERING** — gathering Talinor document family; see reference/mission_data_pack.json
+- **TALINOR_GATHERING** — recovering Talinor Windstride's scattered document family (origin seed, JSON profile family, mythic Elder Board material) beyond the single surviving GUARDIAN stat-block
 - **CLUB_OF_JACKS** — Threshold Joker appearance scoping, Jacks of All Trades development (sequencing question open), rescuing branch-stranded lore from custos
 - **.md library** — 1,674 VETTING pending triage (next major pass)
 - **AI title pass** — antigravity CLI progress in separate session; guide: `~/GUIDE_crispr_ai_title.md`
@@ -54,4 +55,5 @@ The library doesn't fear noise. It distills it.
 | COMMISSION_Noise_Sparstone.md | Sparstone assignment (in .md library) |
 | LUMENAR.md | Active mission — consolidating Lumenar content, assigned GitHub Copilot |
 | TALINOR_GATHERING.md | Active mission — gathering Talinor document family |
+| TALINOR_GATHERING.md | Active mission — recovering Talinor's scattered content across custos + library |
 | CLUB_OF_JACKS.md | Active mission — Threshold Joker/Lumenar/Jacks of All Trades, custos branch-stranding risk |
