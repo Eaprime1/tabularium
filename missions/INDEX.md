@@ -56,7 +56,7 @@ The library doesn't fear noise. It distills it.
 | CUSTOS_BRIEF.md | Bridge document for eaprime1/custos integration |
 | COMMISSION_Noise_Sparstone.md | Sparstone assignment (in .md library) |
 | LUMENAR.md | Active mission — consolidating Lumenar content, assigned GitHub Copilot |
-- **TALINOR_GATHERING** — recovering Talinor Windstride's scattered document family (origin seed, JSON profile family, mythic Elder Board material) beyond the single surviving GUARDIAN stat-block; see reference/mission_data_pack.json
+| TALINOR_GATHERING.md | Active mission — recovering Talinor Windstride's scattered document family (origin seed, JSON profile family, mythic Elder Board material) |
 | CLUB_OF_JACKS.md | Active mission — Threshold Joker/Lumenar/Jacks of All Trades, custos branch-stranding risk |
 | DIAMOND_OF_QUEEN.md | Active mission — The Mnemonist (Conversation Heritage & Indexing) |
 | CLUB_OF_QUEEN.md | Active mission — The Arbiter (Operations & Contributor Pipeline) |
