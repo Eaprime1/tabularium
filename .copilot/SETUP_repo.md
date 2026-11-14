@@ -16,10 +16,15 @@ this baseline), tabularium is missing standard repo files:
 - `.codacy.yml` (if the codacy integration applies here too — check first,
   don't assume)
 
-custos already has `.github/workflows/` CI (claude-code-review,
-dependency-review, finalize-pr, track-pr-failures) — tabularium PR #3
-already ported the same four workflows here, so that part's done. Verify
-they still match if custos's have moved on since.
+custos has `.github/workflows/` CI (claude-code-review, dependency-review,
+finalize-pr) — tabularium PR #3 ported the same workflows here, so that
+part's done. Verify they still match if custos's have moved on since.
+
+**Not part of the baseline: `track-pr-failures`.** PR #3 also ported a
+fourth workflow, `track-pr-failures`. The owner removed it on purpose
+(an unwanted automatic failure-ticket tracker that impacts metered
+usage): custos removed its copy, and tabularium's removal is PR #30. Do
+not port it back, and do not treat its absence as a parity gap.
 
 ## How to do it
 
